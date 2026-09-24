@@ -471,6 +471,18 @@ td.hi{color:var(--aka);font-weight:700;background:var(--aka-l)}
 .tako-mark figcaption{font-size:10.5px;color:var(--gray);font-weight:700;white-space:nowrap}
 @media(max-width:560px){.h3s.has-tako{gap:12px}.tako-mark img{width:58px;height:58px}}
 
+/* トップの理念セクション */
+.mission-story p{font-size:15.5px;line-height:1.95}
+.origin{background:var(--sand);border-left:6px solid var(--aka);border-radius:14px;padding:26px 28px}
+.origin .k{font-family:Inter,sans-serif;font-weight:800;letter-spacing:.24em;color:var(--aka);font-size:24px}
+.origin .yomi{display:block;font-size:13px;color:var(--gray);font-weight:700;margin:4px 0 12px}
+.origin p{font-size:14.5px;margin:0}
+.mission{margin-top:30px;background:var(--ink);color:#fff;border-radius:16px;padding:32px 36px}
+.mission b{display:block;color:#fff;font-size:22px;line-height:1.6}
+.mission ul{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mission li{font-size:14.5px;font-weight:700;color:rgba(255,255,255,.92);border-top:2px solid var(--aka-bright);padding-top:10px}
+@media(max-width:700px){.mission{padding:26px 22px}.mission b{font-size:19px}.mission ul{grid-template-columns:1fr}}
+
 /* 学習者ページ用：ヒーロー直下の数字帯（競合の stats bar に相当。誇張せず、事実だけ） */
 .proof{background:var(--white);border-bottom:1px solid var(--line)}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
