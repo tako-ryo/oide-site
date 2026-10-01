@@ -466,6 +466,24 @@ td.hi{color:var(--aka);font-weight:700;background:var(--aka-l)}
 .tako-mark figcaption{font-size:10.5px;color:var(--gray);font-weight:700;white-space:nowrap}
 @media(max-width:560px){.h3s.has-tako{gap:12px}.tako-mark img{width:58px;height:58px}}
 
+/* トップ：4事業のカード（4列のときは少し詰める） */
+.biz .pcard .body{padding:18px 20px 22px}
+.biz .pcard h3{font-size:17px}
+.biz .pcard p{font-size:13.5px}
+.biz .pcard .num{font-size:12px}
+/* トップ：Tako Talk の紹介ブロック */
+.takotalk{display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;margin:28px 0 0;padding:32px 36px;background:var(--white);border:1px solid var(--line);border-radius:14px}
+.tt-shot img{width:100%;max-width:300px;border-radius:14px;border:1px solid var(--line);display:block;margin:0 auto}
+.tt-eyebrow{font-size:12.5px;font-weight:800;color:var(--aka);letter-spacing:.06em;margin-bottom:8px}
+.takotalk h3{font-size:30px;margin:0 0 10px;color:var(--ink);line-height:1.3}
+.takotalk h3 small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:15px;color:var(--gray);letter-spacing:.02em;margin-top:4px}
+.takotalk p{font-size:15px;margin:0 0 14px}
+.takotalk ul{margin:0 0 18px;padding-left:20px;font-size:14px}
+.takotalk li{margin:6px 0}
+.takotalk li b{color:var(--ink)}
+.tt-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.tt-cta span{font-size:12.5px;color:var(--gray);font-weight:700;max-width:28em}
+@media(max-width:860px){.takotalk{grid-template-columns:1fr;padding:24px 22px}.tt-shot img{max-width:240px}.takotalk h3{font-size:24px}}
 /* トップの理念セクション */
 .mission-story p{font-size:15.5px;line-height:1.95}
 .origin{background:var(--sand);border-left:6px solid var(--indigo);border-radius:14px;padding:26px 28px}
