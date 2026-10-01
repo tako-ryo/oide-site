@@ -33,9 +33,10 @@ p{margin:0 0 1em}
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,248,240,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo img{width:30px;height:30px;border-radius:7px;flex:none}
-.logo small{align-self:flex-end;padding-bottom:4px}
-.logo b{font-family:Inter,sans-serif;font-weight:800;font-size:24px;letter-spacing:.22em;color:var(--aka)}
+.logo img{height:28px;width:auto;flex:none;display:block}
+.logo{flex:none}
+@media(max-width:1180px){.logo small{display:none}nav.main{gap:14px}}
+.logo small{align-self:flex-end;padding-bottom:2px}
 .logo small{font-size:12px;letter-spacing:.2em;color:var(--indigo);font-weight:700}
 nav.main{display:flex;align-items:center;gap:16px}
 nav.main a{color:var(--body);text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
@@ -49,7 +50,7 @@ nav.main a.lang:hover small{color:var(--aka)}
 nav.main a.cta{background:var(--aka);color:#fff;padding:8px 16px;border-radius:999px;box-shadow:none}
 nav.main a.cta:hover{background:var(--aka-d)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:var(--r-sm);padding:8px 8px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer}
-@media(max-width:960px){
+@media(max-width:1080px){
   nav.main{display:none;position:absolute;left:0;right:0;top:64px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 16px}
   nav.main.open{display:flex}
   nav.main a{padding:12px 0;border-bottom:1px solid var(--line);box-shadow:none}
