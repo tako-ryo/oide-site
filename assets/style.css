@@ -76,10 +76,6 @@ nav.main a.cta:hover{background:var(--aka-d)}
 .hero .btns{display:flex;flex-wrap:wrap;gap:12px}
 .hero .tags{margin-top:32px;display:flex;flex-wrap:wrap;gap:8px}
 .hero .tags span{font-size:12px;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 12px;color:rgba(255,255,255,.9)}
-.hero .mark{position:absolute;right:6%;bottom:-40px;width:230px;height:230px;border-radius:50%;background:var(--aka-bright);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
-.hero .mark::before{content:"";position:absolute;inset:26px;border-radius:50%;background:#E2624A}
-.hero .mark span{position:relative;color:#fff;font-weight:900;font-size:36px;letter-spacing:.25em;padding-left:.25em}
-@media(max-width:960px){.hero .mark{width:140px;height:140px;right:-20px;bottom:-30px}.hero .mark::before{inset:16px}.hero .mark span{font-size:22px}}
 @media(max-width:560px){.hero{min-height:560px}.hero h1{font-size:32px}.hero .wrap{padding-top:64px;padding-bottom:112px}}
 
 /* ---------- 下層ページの見出し帯 ---------- */
