@@ -488,6 +488,21 @@ td.hi{color:var(--aka);font-weight:700;background:var(--aka-l)}
 .tt-line{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px}
 .tt-line span{font-size:13px;color:var(--gray);font-weight:700;max-width:44em}
 @media(max-width:768px){.phones{grid-template-columns:1fr;gap:24px}.phones img{max-width:240px}}
+/* トップ：@helpmekansai の紹介 */
+.ig-intro{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:center;margin-top:40px;padding:32px;background:var(--white);border:1px solid var(--line);border-radius:var(--r)}
+.ig-shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ig-shots img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r-sm);border:1px solid var(--line)}
+.ig-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.ig-head img{width:64px;height:64px;object-fit:contain}
+.ig-eyebrow{display:block;font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--aka)}
+.ig-head b{font-family:Inter,"Noto Sans JP",sans-serif;font-size:24px;color:var(--ink);line-height:1.2}
+.ig-body p{font-size:15px;margin:0 0 16px}
+.ig-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.ig-nums div{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 12px}
+.ig-nums b{display:block;font-family:Inter,"Noto Sans JP",sans-serif;font-weight:800;font-size:24px;color:var(--aka);line-height:1.1}
+.ig-nums span{display:block;font-size:12px;color:var(--body);font-weight:700;margin-top:2px}
+.ig-cta{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:768px){.ig-intro{grid-template-columns:1fr;padding:24px}.ig-nums{grid-template-columns:1fr 1fr 1fr;gap:8px}.ig-nums b{font-size:20px}}
 /* トップの理念セクション */
 .mission-story p{font-size:16px;line-height:1.95}
 .origin{background:var(--sand);border-left:6px solid var(--indigo);border-radius:var(--r);padding:24px 24px}
