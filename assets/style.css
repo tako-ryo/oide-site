@@ -32,7 +32,9 @@ p{margin:0 0 1em}
 .topbar{height:6px;background:var(--aka-bright)}
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,248,240,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:30px;height:30px;border-radius:7px;flex:none}
+.logo small{align-self:flex-end;padding-bottom:4px}
 .logo b{font-family:Inter,sans-serif;font-weight:800;font-size:24px;letter-spacing:.22em;color:var(--aka)}
 .logo small{font-size:12px;letter-spacing:.2em;color:var(--indigo);font-weight:700}
 nav.main{display:flex;align-items:center;gap:16px}
