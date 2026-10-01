@@ -137,8 +137,8 @@ a.card .to::after{content:" →"}
 a.card:hover .to{text-decoration:underline}
 .card .thumb{display:flex;align-items:center;justify-content:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);height:210px;margin:0 0 16px;padding:16px;overflow:hidden}
 .card .thumb img{max-height:100%;max-width:100%;width:auto;border-radius:3px;box-shadow:var(--shadow-md)}
-.card .thumb.logo{background:#fff}
-.card .thumb.logo img{box-shadow:none;border-radius:0;max-height:72%}
+.card .thumb.brand{background:#fff}
+.card .thumb.brand img{box-shadow:none;border-radius:0;max-height:76%}
 @media(max-width:560px){.card .thumb{height:250px}}
 .card li{margin:4px 0}
 .band{background:var(--sand);border-left:6px solid var(--indigo);border-radius:var(--r);padding:16px 24px;font-weight:700;color:var(--ink);margin-top:24px;font-size:15px}
