@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&amp;family=Inter:wght@600;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261002a">
+<link rel="stylesheet" href="assets/style.css?v=20261002b">
 </head>
 <body>
 <div class="topbar"></div>
@@ -23,11 +23,10 @@
     <a class="logo" href="index.html"><img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28"><small>ことは</small></a>
     <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav" onclick="toggleNav(this)">MENU</button>
     <nav class="main" id="nav">
-      <a href="index.html">事業内容</a>
-      <a href="index.html#mission">理念</a>
-      <a href="schools.html">日本語学校の方へ</a>
-      <a href="sns.html">飲食店・宿の方へ</a>
-      <a href="teaching.html">日本語教育</a>
+      <a href="index.html">ホーム</a>
+      <a href="schools.html">学校の方へ</a>
+      <a href="sns.html">お店の方へ</a>
+      <a href="teaching.html">講師になりたい方へ</a>
       <a href="works.html">実績</a>
       <a href="about.html">代表</a>
       <a class="lang" href="learners.html"><b lang="en">Study in Japan</b><small>留学希望の方へ（英語）</small></a>
@@ -100,12 +99,13 @@
     <p class="note" style="margin-top:18px">Instagram のメッセージ（DM）でも受け付けています。<a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">@helpmekansai に送る →</a></p>
 
     <div class="h3s"><h2>お問い合わせのあと</h2><p>初回は売り込みません。まず状況をお聞きします</p></div>
-    <div class="steps four">
+    <div class="steps four" id="after-steps">
       <div class="step"><b>2営業日以内にご返信</b><p>ご記入いただいたメールアドレス宛にお返事します。日本語・英語どちらでも対応します。</p></div>
-      <div class="step"><b>オンラインで30分</b><p>現状と困りごとをお聞きします。この時点で料金の話はしません。</p></div>
-      <div class="step"><b>無料のサンプルをお出し</b><p>学校には紹介できそうな学生像と進め方を、店舗にはサンプル投稿を1本。</p></div>
+      <div class="step"><b data-k="t2">オンラインで30分</b><p data-k="p2">現状と困りごとをお聞きします。この時点で料金の話はしません。</p></div>
+      <div class="step"><b data-k="t3">無料でご提案</b><p data-k="p3">お話をもとに、合いそうな進め方をお伝えします。</p></div>
       <div class="step"><b>見てから決めていただけます</b><p>お気に召さなければ、それで終わりで構いません。こちらから追いかけてご連絡することはありません。</p></div>
     </div>
+    <p class="note" id="after-note">上の「ご用件」で選んだ内容に合わせて、流れの説明が変わります。</p>
 
     <div class="h3s"><h2>対応できる範囲</h2></div>
     <div class="grid g3">
@@ -120,11 +120,11 @@
 <footer>
   <div class="wrap">
     <div class="fnav">
-      <a href="index.html">事業内容</a>
+      <a href="index.html">ホーム</a>
       <a href="index.html#mission">理念</a>
-      <a href="schools.html">日本語学校の方へ</a>
-      <a href="sns.html">飲食店・宿の方へ</a>
-      <a href="teaching.html">日本語教育</a>
+      <a href="schools.html">学校の方へ</a>
+      <a href="sns.html">お店の方へ</a>
+      <a href="teaching.html">講師になりたい方へ</a>
       <a href="works.html">実績</a>
       <a href="about.html">代表</a>
       <a href="contact.html">お問い合わせ</a>
@@ -158,6 +158,21 @@
       subjectField.value = (picked && subjects[picked.value]) || '【KOTOHA】サイトからのお問い合わせ';
     }
     f.querySelectorAll('input[name="ご用件"]').forEach(function(r){ r.addEventListener('change', updateSubject); });
+    /* 用件ごとに「お問い合わせのあと」の2・3歩目を切り替える */
+    var afterText = {
+      '日本語学校': {t2:'オンラインで30分', p2:'貴校のコース・入学時期・受け入れたい学生像をうかがいます。この時点で費用の話はしません。', t3:'紹介できそうな学生像をご提案', p3:'うかがった内容をもとに、ご紹介できそうな学生像と進め方をお伝えします。紹介料は入学確定後の成功報酬です。'},
+      '飲食店・宿・体験事業者': {t2:'店名とアカウントを教えてください', p2:'お店の様子と、いま困っていることをうかがいます。面談は不要です。', t3:'サンプル投稿を1本、無料で', p3:'貴店向けの投稿を1本お作りしてお送りします（2〜3日）。英語と日本語の両方です。'},
+      '日本語学習・留学': {t2:'英語で30分の無料カウンセリング', p2:'いまの日本語のレベルと、日本で何をしたいかを英語でうかがいます。', t3:'合いそうな学校を数校ご案内', p3:'レベル・目的・予算・時期に合う学校を、それぞれの違いとあわせてお伝えします。費用はかかりません。'},
+      '日本語講師コンサル': {t2:'いまの状況をうかがいます', p2:'教えた経験、使える時間、いつまでに始めたいか。メールのやり取りで十分です。', t3:'合うプランをお伝えします', p3:'ベーシック／スタンダード／フルサポートのどれが合うか、理由とあわせてお伝えします。無理にはお勧めしません。'},
+      'その他': {t2:'オンラインで30分', p2:'現状と困りごとをお聞きします。この時点で料金の話はしません。', t3:'無料でご提案', p3:'お話をもとに、合いそうな進め方をお伝えします。'}
+    };
+    function updateAfter(){
+      var picked = f.querySelector('input[name="ご用件"]:checked');
+      var v = afterText[(picked && picked.value)] || afterText['その他'];
+      ['t2','p2','t3','p3'].forEach(function(k){ var el = document.querySelector('[data-k="'+k+'"]'); if (el) el.textContent = v[k]; });
+    }
+    f.querySelectorAll('input[name="ご用件"]').forEach(function(r){ r.addEventListener('change', updateAfter); });
+    updateAfter();
     updateSubject();
 
     f.addEventListener('submit', function(e){
