@@ -626,8 +626,8 @@ td.hi{color:var(--aka);font-weight:700;background:var(--aka-l)}
 .tako-follower img.swap{animation:tako-bounce .5s ease}
 /* 本文の横に余白が取れない画面幅では、小さくして隅に置く */
 .tako-follower.corner img{width:86px;height:86px}
-.tako-follower.corner .follower-bubble{font-size:.78rem;padding:4px 8px;max-width:168px}
-.follower-bubble{font-size:.88rem;padding:4px 12px;max-width:220px;white-space:normal;text-align:center}
+.tako-follower.corner .follower-bubble{font-size:.78rem;padding:5px 9px 10px;max-width:168px}
+.follower-bubble{font-size:.88rem;padding:6px 12px 12px;max-width:220px;white-space:normal;text-align:center;line-height:1.35}
 .follower-bubble::after{left:50%;margin-left:-8px}
 @media(max-width:768px){.tako-follower img{width:84px;height:84px}.follower-bubble{font-size:.8rem;max-width:170px}}
 
