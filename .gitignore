@@ -16,3 +16,10 @@ _old/
 
 # ---- 有料コンテンツ・納品物（絶対に公開リポジトリへ上げない）----
 *.pdf
+
+# ---- AIエージェント用スキル（taste-skill）----
+.agents/
+
+# ---- デザイン検査ツール ----
+.impeccable/
+skills-lock.json
