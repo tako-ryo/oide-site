@@ -90,6 +90,11 @@ nav.main a.cta:hover{background:var(--aka-d)}
 .phero h1{color:#fff;font-size:36px;margin:12px 0 12px;font-weight:900;line-height:1.35;max-width:820px}
 .phero p{font-size:16px;color:rgba(255,255,255,.9);max-width:720px;margin:0}
 .phero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+/* 主CTAの下に置く「通話でもいいですよ」の一行 */
+.btns-alt{margin:14px 0 0;font-size:14px;color:rgba(255,255,255,.85)}
+.btns-alt a{color:#fff}
+.bm-alt{margin:14px 0 0;font-size:13px;font-weight:700;color:rgba(255,255,255,.9)}
+.bm-alt a{color:#fff}
 @media(max-width:560px){.phero{padding:48px 0 48px}.phero h1{font-size:28px}}
 
 /* ---------- ボタン ---------- */
