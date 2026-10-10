@@ -597,6 +597,7 @@ td.hi{color:var(--aka);font-weight:700;background:var(--aka-l)}
 /* 学習者ページ用：ヒーロー直下の数字帯（競合の stats bar に相当。誇張せず、事実だけ） */
 .proof{background:var(--white);border-bottom:1px solid var(--line)}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.proof.two .wrap{grid-template-columns:repeat(2,1fr)}
 .proof .wrap>div{padding:22px 20px;border-left:1px solid var(--line)}
 .proof .wrap>div:first-child{border-left:0;padding-left:0}
 .proof b{display:block;font-family:Outfit,"Noto Sans JP",sans-serif;font-weight:800;font-size:30px;color:var(--aka);line-height:1.05;letter-spacing:-.02em}
