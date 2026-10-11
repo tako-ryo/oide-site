@@ -902,3 +902,10 @@ br.pc{display:inline}
   .rp-sticky .btn{white-space:nowrap}
   body.rp{padding-bottom:72px}
 }
+
+/* 実績：Lanclo 紹介ページのスクリーンショット */
+.lp-grid{align-items:start}
+.lp-shot{margin:0}
+.lp-shot img{display:block;width:100%;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow-md)}
+.lp-shot figcaption{margin-top:10px;font-size:13px;color:var(--gray);font-weight:700}
+.lp-box{margin:0}
