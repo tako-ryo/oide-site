@@ -974,3 +974,12 @@ br.pc{display:inline}
   .ln-sec{padding:56px 0}
   .ln-head h2{font-size:24px}
 }
+/* 文字量を減らした版：チェック項目は見出しだけのチップ */
+.checks.compact{grid-template-columns:repeat(4,1fr)}
+.checks.compact li{padding:14px 16px;display:flex;align-items:center;gap:10px}
+.checks.compact li::before{margin:0;font-size:12px}
+.checks.compact li b{margin:0;font-size:15px}
+@media(max-width:960px){.checks.compact{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.checks.compact{grid-template-columns:1fr}}
+.ln-worry .ln-head{margin-bottom:28px}
+.ln-reasons p{font-size:16px}
