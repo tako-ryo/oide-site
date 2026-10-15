@@ -909,3 +909,68 @@ br.pc{display:inline}
 .lp-shot img{display:block;width:100%;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow-md)}
 .lp-shot figcaption{margin-top:10px;font-size:13px;color:var(--gray);font-weight:700}
 .lp-box{margin:0}
+
+/* ---------- 学習者ページ 2026-10-15 刷新：不安→落とし穴→3つの理由→代表の言葉 の流れ ---------- */
+.ln-sec{padding:72px 0}
+.ln-head{margin-bottom:32px}
+.ln-head.center{text-align:center}
+.ln-head.center .sec-label{justify-content:center}
+.ln-head h2{font-size:30px;line-height:1.4;max-width:24em;margin:0 auto}
+.ln-tags{margin-top:18px}
+.ln-tags li{font-size:14px}
+/* 不安の吹き出し */
+.ln-worry{background:var(--sand);padding:64px 0}
+.ln-bubbles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ln-bubbles li{position:relative;background:var(--white);border:3px solid var(--ink);border-radius:var(--r-lg);padding:22px 22px 24px;font-weight:800;color:var(--indigo);font-size:16px;line-height:1.6}
+.ln-bubbles li::after{content:"";position:absolute;bottom:-13px;left:34px;width:18px;height:18px;background:var(--white);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:rotate(45deg) skew(10deg,10deg)}
+.ln-bubbles p{margin:0}
+.ln-after{text-align:center;max-width:40em;margin:36px auto 0;font-weight:700;color:var(--body)}
+@media(max-width:960px){.ln-bubbles{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ln-bubbles{grid-template-columns:1fr;gap:22px}.ln-bubbles li{font-size:15px;padding:18px 18px 20px}}
+/* 落とし穴（紺の帯） */
+.ln-trap{background:var(--indigo);color:#fff;padding:72px 0}
+.ln-trap-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.ln-trap h2{color:#fff;font-size:30px;line-height:1.4;margin:0 0 14px}
+.ln-trap-lead p{color:rgba(255,255,255,.9);font-size:15px;line-height:1.85;margin:0}
+.sec-label.light{color:#FBD9CF}
+.sec-label.light::before{background:var(--aka-bright)}
+.ln-trap-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ln-trap-list li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:18px 20px}
+.ln-trap-list b{display:block;color:#fff;font-size:17px;margin-bottom:4px}
+.ln-trap-list span{display:block;color:rgba(255,255,255,.88);font-size:14px;line-height:1.75}
+.ln-trap-line{margin-top:32px;background:var(--aka);color:#fff;border-radius:var(--r);padding:18px 24px;font-weight:800;font-size:17px;line-height:1.6;text-align:center}
+@media(max-width:960px){.ln-trap-grid{grid-template-columns:1fr;gap:24px}.ln-trap h2{font-size:24px}}
+/* 3つの理由 */
+.ln-reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ln-reasons article{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px 24px;display:flex;flex-direction:column}
+.ln-reasons article.hi{border-color:var(--aka);box-shadow:var(--shadow-md)}
+.ln-num{font-family:Outfit,"Noto Sans JP",sans-serif;font-weight:900;font-size:40px;color:var(--aka);line-height:1;letter-spacing:-.02em;margin-bottom:12px}
+.ln-reasons h3{font-size:21px;line-height:1.4;margin:0 0 10px}
+.ln-reasons p{font-size:15px;line-height:1.8;margin:0 0 12px;flex:1}
+.ln-reasons ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line);padding-top:12px}
+.ln-reasons li{font-size:14px;font-weight:700;color:var(--ink);padding-left:18px;position:relative;margin:6px 0}
+.ln-reasons li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:5px;border-left:2px solid var(--aka);border-bottom:2px solid var(--aka);transform:rotate(-45deg)}
+@media(max-width:960px){.ln-reasons{grid-template-columns:1fr}}
+/* 途中のCTA */
+.ln-mid{padding:0 0 8px}
+.ln-mid-box{display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px 28px}
+.ln-mid-box b{display:block;font-size:18px;color:var(--ink);margin-bottom:4px}
+.ln-mid-box span{display:block;font-size:14px;color:var(--body);line-height:1.7;max-width:46em}
+.ln-mid-box .btn{flex:none}
+@media(max-width:768px){.ln-mid-box{flex-direction:column;align-items:stretch;text-align:center;padding:24px}}
+/* 代表の言葉 */
+.ln-founder{background:var(--sand)}
+.ln-author{max-width:none}
+.ln-author h2{font-size:26px;margin:6px 0 12px}
+.ln-author p+p{margin-top:10px}
+/* スマホ用の固定ボタン */
+.ln-sticky{display:none}
+@media(max-width:768px){
+  .ln-sticky{display:flex;align-items:center;justify-content:space-between;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s ease}
+  .ln-sticky.on{transform:none}
+  .ln-sticky b{display:block;font-family:Outfit,"Noto Sans JP",sans-serif;font-weight:900;color:var(--aka);font-size:18px;line-height:1.1}
+  .ln-sticky small{display:block;font-size:11px;color:var(--gray);font-weight:700;margin-top:2px}
+  .ln-sticky .btn{flex:none;padding:10px 18px;font-size:14px}
+  .ln-sec{padding:56px 0}
+  .ln-head h2{font-size:24px}
+}
