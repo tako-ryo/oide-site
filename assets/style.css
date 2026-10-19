@@ -954,6 +954,40 @@ br.pc{display:inline}
 /* 途中のCTA */
 .ln-notice{margin:20px 0 0;font-weight:700;font-size:15px;line-height:1.7}
 .ln-notice a{color:var(--aka);text-decoration:underline;font-weight:800}
+/* ---- たこ先生の登場回数を増やす部品（2026-10-19） ---- */
+.ln-notice{display:flex;align-items:center;gap:14px}
+.ln-notice img{width:56px;height:56px;flex:none;object-fit:contain}
+.has-tk{position:relative}
+.has-tk .tk{position:absolute;right:12px;top:10px;width:72px;height:72px;object-fit:contain;pointer-events:none;filter:drop-shadow(0 4px 8px rgba(42,35,32,.14))}
+.card.has-tk{padding-right:92px}
+.has-tk.tk-sm .tk{width:56px;height:56px;right:10px;top:12px}
+.step.has-tk{padding-right:68px}
+.ln-reasons article.has-tk .tk{width:88px;height:88px;top:14px;right:14px}
+.ln-meet{display:flex;align-items:center;gap:24px;margin-top:16px;padding:20px 24px;background:var(--white);border:1px solid var(--line);border-radius:var(--r)}
+.ln-meet img{width:120px;height:120px;flex:none;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(42,35,32,.16))}
+.ln-meet b{display:block;font-size:18px;color:var(--ink);margin-bottom:4px}
+.ln-meet p{margin:0;font-size:15px;line-height:1.75;color:var(--body)}
+.ln-meet a{color:var(--aka);font-weight:800}
+.tako-say{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:20px}
+.tako-say .speech-bubble{white-space:normal;font-size:15px;line-height:1.5;margin-left:4px;max-width:30em}
+.tako-say img{width:110px;height:110px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(42,35,32,.16))}
+.ln-book-tako{margin-top:24px}
+.ln-book-tako img{width:170px;height:170px}
+.ln-foot-tako{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.ln-foot-tako img{width:84px;height:84px;flex:none;object-fit:contain}
+.ln-foot-tako .speech-bubble{white-space:normal;font-size:14px;line-height:1.5}
+.ln-foot-tako .speech-bubble::after{left:-9px;bottom:auto;top:50%;margin-top:-7px;transform:rotate(135deg) skew(10deg,10deg)}
+.ln-foot-tako .speech-bubble a{color:var(--aka)}
+body.tako-roomy .h3s .tako-mark{display:none}
+.en-body .h3s.has-tako{align-items:center;gap:20px}
+.en-body .tako-mark{gap:6px}
+.en-body .tako-mark img{width:84px;height:84px;filter:drop-shadow(0 6px 10px rgba(42,35,32,.14))}
+.en-body .tako-mark figcaption{background:#fff;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--indigo);white-space:normal;text-align:center;max-width:13em;line-height:1.3}
+.step.has-tk{padding-right:60px}
+.step.has-tk .tk{width:48px;height:48px;right:10px;top:12px}
+.ln-sticky-l{display:flex;align-items:center;gap:10px;min-width:0}
+.ln-sticky-l img{width:44px;height:44px;flex:none;object-fit:contain}
+@media(max-width:768px){.ln-meet{flex-direction:column;text-align:center;gap:12px}.ln-meet img{width:100px;height:100px}.has-tk .tk{width:60px;height:60px}.card.has-tk{padding-right:80px}.ln-reasons article.has-tk .tk{width:72px;height:72px}}
 .ln-mid{padding:0 0 8px}
 .ln-mid-box{display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px 28px}
 .ln-mid-box b{display:block;font-size:18px;color:var(--ink);margin-bottom:4px}
@@ -1052,3 +1086,6 @@ br.pc{display:inline}
 @media(max-width:960px){.ln-book{grid-template-columns:1fr;gap:24px;padding:28px 20px;margin-top:48px}.ln-book h2{font-size:24px}.cform.ln-form{padding:20px}}
 /* ラベルが2行になっても入力欄の高さを揃える */
 .cform.ln-form .cf-grid{align-items:end}
+/* たこ先生：よくある失敗の段でもスマホで表示（上の display:none を上書き） */
+@media(max-width:960px){.ln-trap-tako{display:flex}.ln-trap-tako img{width:140px;height:140px}.ln-trap-tako .speech-bubble{font-size:.95rem;margin-left:8px}}
+@media(max-width:768px){.en-body .h3s.has-tako{align-items:flex-start}}
