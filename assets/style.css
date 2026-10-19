@@ -952,6 +952,8 @@ br.pc{display:inline}
 .ln-reasons li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:5px;border-left:2px solid var(--aka);border-bottom:2px solid var(--aka);transform:rotate(-45deg)}
 @media(max-width:960px){.ln-reasons{grid-template-columns:1fr}}
 /* 途中のCTA */
+.ln-notice{margin:20px 0 0;font-weight:700;font-size:15px;line-height:1.7}
+.ln-notice a{color:var(--aka);text-decoration:underline;font-weight:800}
 .ln-mid{padding:0 0 8px}
 .ln-mid-box{display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px 28px}
 .ln-mid-box b{display:block;font-size:18px;color:var(--ink);margin-bottom:4px}
