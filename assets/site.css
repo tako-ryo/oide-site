@@ -358,3 +358,12 @@ section.tint div.band:not(.ln-notice){background:transparent}
   .venn .core{font-size:22px}
   .venn .setlabel{font-size:22px}
 }
+
+/* ---------- 3つが重なって、できたもの（about） ---------- */
+.made{margin-top:clamp(40px,4.4vw,64px)}
+.made .lbl{margin-bottom:18px}
+.made-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,34px)}
+.made-grid > div{border-top:1px solid var(--line);padding:22px 0 0}
+.made-grid b{display:block;font-size:17px;letter-spacing:-.003em;margin-bottom:8px}
+.made-grid span{display:block;font-size:14px;line-height:1.95;color:var(--body)}
+@media(max-width:720px){.made-grid{grid-template-columns:1fr}}
