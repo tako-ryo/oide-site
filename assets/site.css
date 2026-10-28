@@ -343,3 +343,18 @@ section.tint div.band:not(.ln-notice){background:transparent}
 /* アカウント名は札をやめ、赤い小見出しに */
 .showcase .acct{background:transparent;border-radius:0;padding:0;margin-bottom:10px;
   font-family:var(--en);font-size:12px;font-weight:600;letter-spacing:.08em}
+
+/* ---------- ベン図：塗りをやめ、細い線と濃度の重なりで示す ---------- */
+.venn .set{fill:var(--ink);fill-opacity:.045;stroke:var(--ink);stroke-opacity:.26;stroke-width:1}
+.venn .core-circle{fill:var(--cream);stroke:var(--aka);stroke-width:1.5}
+.venn .core{font-family:var(--en);font-size:19px;font-weight:600;fill:var(--aka);letter-spacing:.02em}
+.venn .setlabel{font-size:17px;font-weight:700;letter-spacing:-.003em}
+.venn .setsub{font-size:12px;font-weight:400;fill:var(--gray)}
+.venn .pair{font-size:12px;font-weight:600;fill:var(--body)}
+.vennwrap{margin:0 0 44px}
+.vennwrap figcaption{color:var(--gray)}
+@media(max-width:560px){
+  .venn .core-circle{stroke-width:2}
+  .venn .core{font-size:22px}
+  .venn .setlabel{font-size:22px}
+}
