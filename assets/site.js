@@ -39,25 +39,42 @@ if (/[?&]shot/.test(location.search)) document.documentElement.classList.add('sh
             + ' .kpis > *, .posts > *, .phones > *, .floors > *, .worry > *, .nums > *,'
             + ' .after > *, .ln-reasons > *, .ln-bubbles > li, .rp-days > *, .rp-journey > li,'
             + ' .rp-perks > *, .rp-reviews > *, .sch > *, .cform';
-    var els = [];
+    var auto = [];
     document.querySelectorAll(sel).forEach(function(el){
       if (el.closest('.hdr, .ft, .toc, .marq, .tako-follower')) return;
       if (el.classList.contains('rv')) return;
-      els.push(el);
+      auto.push(el);
     });
-    els.forEach(function(el){ el.classList.add('rv'); });
+    auto.forEach(function(el){ el.classList.add('rv'); });
+    /* HTML 側で最初から .rv が付いている要素も必ず対象に含める */
+    var els = [].slice.call(document.querySelectorAll('.rv'));
     /* 同じ親の兄弟には少しずつ遅れを付ける */
     var seen = new Map();
     els.forEach(function(el){
       var p = el.parentElement;
       var n = (seen.get(p) || 0);
-      if (n) el.style.setProperty('--i', Math.min(n, 4));
+      if (n && !el.style.getPropertyValue('--i')) el.style.setProperty('--i', Math.min(n, 4));
       seen.set(p, n + 1);
     });
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
     }, { threshold:.08, rootMargin:'0px 0px -5% 0px' });
     els.forEach(function(el){ io.observe(el); });
+    /* 保険：出現処理が働かない環境でも、文字が消えたままにならないようにする */
+    function revealVisible(){
+      els.forEach(function(el){
+        if (el.classList.contains('on')) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < innerHeight && r.bottom > 0) el.classList.add('on');
+      });
+    }
+    addEventListener('load', function(){ setTimeout(revealVisible, 300); });
+    setTimeout(function(){
+      revealVisible();
+      /* ひとつも出ていないなら監視そのものが効いていない。全部出して打ち切る */
+      var shown = els.filter(function(el){ return el.classList.contains('on'); }).length;
+      if (!shown) { io.disconnect(); els.forEach(function(el){ el.classList.add('on'); }); }
+    }, 1800);
   } else {
     document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('on'); });
   }
