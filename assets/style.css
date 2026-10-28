@@ -1089,3 +1089,52 @@ body.tako-roomy .h3s .tako-mark{display:none}
 /* たこ先生：よくある失敗の段でもスマホで表示（上の display:none を上書き） */
 @media(max-width:960px){.ln-trap-tako{display:flex}.ln-trap-tako img{width:140px;height:140px}.ln-trap-tako .speech-bubble{font-size:.95rem;margin-left:8px}}
 @media(max-width:768px){.en-body .h3s.has-tako{align-items:flex-start}}
+
+/* ---- 英語ページ：契約校の案内（#schools）。写真が左、本文が右。許可待ちの学校は .sch-tile（紺のタイル＋たこ先生） ---- */
+.ln-schools{background:var(--sand)}
+.ln-schools .ln-head{margin-bottom:8px}
+.sch{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);margin-top:20px}
+.sch-media{position:relative;display:flex;flex-direction:column;background:var(--indigo-l);min-height:100%}
+.sch-media .hero{width:100%;flex:1;min-height:280px;object-fit:cover}
+.sch-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3px}
+.sch-thumbs img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.sch-badge{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);color:var(--indigo);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:800;letter-spacing:.02em;box-shadow:var(--shadow)}
+.sch-tile{flex:1;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--indigo);color:#fff;text-align:center;padding:40px 24px}
+.sch-tile-city{font-family:Outfit,"Noto Sans JP",sans-serif;font-weight:900;font-size:44px;letter-spacing:.14em;line-height:1;color:#fff;opacity:.92}
+.sch-tile img{width:150px;height:150px;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.3))}
+.sch-tile small{font-size:13px;font-weight:700;color:rgba(255,255,255,.75)}
+.sch-body{padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.sch-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sch-logo{height:40px;width:auto;max-width:240px;object-fit:contain}
+.sch-logo.round{height:48px;width:48px;border-radius:50%}
+.sch-city{font-family:Outfit,"Noto Sans JP",sans-serif;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--aka);background:var(--aka-l);border-radius:999px;padding:4px 12px}
+.sch-cert{font-size:13px;font-weight:800;color:var(--gold-t);background:var(--gold-l);border-radius:999px;padding:4px 12px}
+.sch h3{font-size:22px;line-height:1.35;margin:0}
+.sch h3 .jp{display:block;font-size:13px;color:var(--gray);font-weight:700;margin-top:4px;letter-spacing:.02em}
+.sch-why{font-size:15px;line-height:1.85;margin:0;color:var(--body)}
+.sch-pts{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sch-pts li{font-size:14px;font-weight:700;color:var(--ink);padding-left:18px;position:relative;line-height:1.6}
+.sch-pts li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:5px;border-left:2px solid var(--aka);border-bottom:2px solid var(--aka);transform:rotate(-45deg)}
+.sch-facts{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 20px}
+.sch-facts li{border-top:1px solid var(--line);padding-top:8px}
+.sch-facts b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);margin-bottom:2px}
+.sch-facts span{display:block;font-size:14px;font-weight:700;color:var(--ink);line-height:1.6}
+.sch-foot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.sch-site{font-size:13px;font-weight:800;color:var(--aka);text-decoration:none;border:1px solid var(--aka);border-radius:999px;padding:7px 14px}
+.sch-site:hover{background:var(--aka-l)}
+.sch-site::after{content:" ↗"}
+.sch-tako{display:flex;align-items:flex-end;gap:8px;margin-left:auto}
+.sch-tako img{width:64px;height:64px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 8px rgba(42,35,32,.14))}
+.sch-tako .speech-bubble{white-space:normal;font-size:13px;line-height:1.45;padding:6px 12px;max-width:16em;border-width:2px}
+.sch-tako .speech-bubble::after{left:auto;right:-8px;bottom:12px;width:10px;height:10px;border-width:2px;transform:rotate(-45deg) skew(10deg,10deg)}
+@media(max-width:960px){
+  .sch{grid-template-columns:1fr}
+  .sch-media .hero{min-height:0;aspect-ratio:16/9;flex:none}
+  .sch-tile{min-height:220px;padding:28px 20px}.sch-tile-city{font-size:34px}.sch-tile img{width:110px;height:110px}
+  .sch-body{padding:22px 20px 20px}
+}
+@media(max-width:560px){
+  .sch-facts{grid-template-columns:1fr;gap:8px}
+  .sch-tako{margin-left:0;width:100%}
+  .sch h3{font-size:20px}
+}

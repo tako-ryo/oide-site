@@ -14,23 +14,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&amp;family=Outfit:wght@600;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261023">
+<link rel="stylesheet" href="assets/style.css?v=20261028b">
+<link rel="stylesheet" href="assets/site.css?v=20261028b">
 <noscript><style>.reveal{opacity:1;transform:none}.tako-follower{display:none}</style></noscript>
 </head>
 <body class="en-body">
-<div class="topbar"></div>
-<header class="site">
+<header class="hdr onHero" id="hdr">
   <div class="wrap">
     <a class="logo" href="learners.html"><img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28"><small>ことは</small></a>
-    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav" onclick="toggleNav(this)">MENU</button>
-    <nav class="main" id="nav">
-      <a class="active" href="#top">Study in Japan</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav">
       <a href="#why">Why KOTOHA?</a>
       <a href="#how">How it works</a>
-      <a href="#perk">Bonus</a>
+      <a href="#schools">Schools</a>
       <a href="#cost">Costs</a>
       <a href="#visa">Visa &amp; timing</a>
       <a href="#faq">FAQ</a>
+      <a class="lang" href="index.html" lang="ja">日本語</a>
       <a class="cta" href="#book">Get started</a>
     </nav>
   </div>
@@ -345,6 +345,225 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- 契約校の案内。学費は各校の公表額（2026-27）を転記。年1回、各校の募集要項で見直す。写真・ロゴは各校の許可済み（東京工学院・京都民際は確認中なので文字のみ） -->
+<section class="ln-sec ln-schools" id="schools">
+  <div class="wrap">
+    <div class="ln-head center" data-tako="teacher-mode-glasses" data-side="left" data-bubble="Five schools. I know each one.">
+      <div class="sec-label">Schools I work with</div>
+      <h2>Five schools I've signed with, and what I'd tell you about each.</h2>
+      <p class="ln-sub">I have a referral agreement with every school below. The fee comes from the school's marketing budget, so your tuition is the same as applying directly. No school owns me: if one that isn't on this list fits you better, I'll say so.</p>
+    </div>
+
+    <!-- 大阪YWCA専門学校 -->
+    <article class="sch reveal" id="sch-ywca">
+      <div class="sch-media">
+        <img class="hero" style="object-position:28% 50%" src="img/schools/ywca-courses-1.jpg" alt="Students at Osaka YWCA College working through a textbook together in class" width="1400" height="946" loading="lazy">
+        <div class="sch-thumbs">
+          <img src="img/schools/ywca-education-1.jpg" alt="A teacher at the whiteboard at Osaka YWCA College" width="700" height="473" loading="lazy">
+          <img src="img/schools/ywca-campus-3.jpg" alt="Osaka YWCA College students on a spring outing in a park" width="700" height="467" loading="lazy">
+        </div>
+        <span class="sch-badge">Osaka · 10 min from Umeda</span>
+      </div>
+      <div class="sch-body">
+        <div class="sch-top">
+          <img class="sch-logo" src="img/schools/ywca-logo.svg" alt="Osaka YWCA logo" width="190" height="40" loading="lazy">
+          <span class="sch-city">Osaka</span>
+        </div>
+        <h3>Osaka YWCA College, Japanese Language Department<span class="jp" lang="ja">大阪YWCA専門学校 日本語学科</span></h3>
+        <p class="sch-why">A small school run by a non-profit that has been in Osaka since 1918 and teaching Japanese to foreigners since 1978. Full days, Monday to Friday, so it suits people who want to go hard on study and move on to a Japanese university or vocational school. Ten minutes on foot from Umeda, which is also my side of town.</p>
+        <ul class="sch-pts">
+          <li>Full-day timetable, 10:00 to 16:00, with afternoon reading, writing, conversation and kanji</li>
+          <li>Only 30 places per intake, so teachers know everyone by name</li>
+          <li>School scholarships (around ¥180,000 over six months) go to a good share of students</li>
+          <li>Staff go with you to the hospital if you're ill, and the YWCA community runs lunches and conversation exchanges</li>
+        </ul>
+        <ul class="sch-facts">
+          <li><b>Nearest stations</b><span>Umeda and JR Osaka 10 min, Nakazakicho 5 min</span></li>
+          <li><b>Student-visa intakes</b><span>April (1 year), October (1.5 years)</span></li>
+          <li><b>Apply by</b><span>31 Oct for April, 30 Apr for October</span></li>
+          <li><b>1 year, student visa</b><span>From ¥840,000 (materials included)</span></li>
+          <li><b>Short courses</b><span>4 weeks from ¥76,000 (mornings) or ¥130,000 (full day); summer and evening classes too</span></li>
+          <li><b>Housing</b><span>Partner dorms from ¥36,000 a month; airport pick-up ¥5,000</span></li>
+          <li><b>To get in</b><span>High-school diploma, A1-level Japanese, school test and interview</span></li>
+          <li><b>Immigration</b><span>Approved to sponsor student visas since 2017</span></li>
+        </ul>
+        <div class="sch-foot">
+          <a class="btn sm" href="#book" data-school="Osaka YWCA College (Osaka)">Ask me about this school</a>
+          <a class="sch-site" href="https://osakaywca.ac.jp/en/" target="_blank" rel="noopener">School website</a>
+          <div class="sch-tako"><div class="speech-bubble">Ten minutes from my desk. Come and say hi after class!</div><img src="img/tako/eeyan-approval.webp" alt="" width="64" height="64" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- コミュニカ学院 -->
+    <article class="sch reveal" id="sch-communica">
+      <div class="sch-media">
+        <img class="hero" src="img/schools/communica-class.jpg" alt="Communica Institute students chatting at a classroom event, one holding a name tag" width="1400" height="990" loading="lazy">
+        <div class="sch-thumbs">
+          <img src="img/schools/communica-building.jpg" alt="The Communica Institute building in Kobe" width="476" height="1000" loading="lazy">
+          <img src="img/schools/communica-sports.jpg" alt="Communica Institute students at a sports day in a Kobe park" width="1000" height="750" loading="lazy">
+        </div>
+        <span class="sch-badge">Kobe · 7 min from Sannomiya</span>
+      </div>
+      <div class="sch-body">
+        <div class="sch-top">
+          <img class="sch-logo round" src="img/schools/communica-logo.jpg" alt="Communica Institute logo, since 1988" width="48" height="48" loading="lazy">
+          <span class="sch-city">Kobe</span>
+        </div>
+        <h3>Communica Institute<span class="jp" lang="ja">コミュニカ学院</span></h3>
+        <p class="sch-why">The most Western classroom I know of in Kansai: by the school's own count, about six in ten students come from Europe or the Americas, and most are over 25. Teaching is serious and seminar-style, built around learning to study on your own, and the principal helped write Japan's CEFR-based framework for Japanese. Kobe is a calm, hilly port city 30 minutes from Osaka.</p>
+        <ul class="sch-pts">
+          <li>Four intakes a year, 6 to 24 months, plus 1-, 2- and 3-month short courses</li>
+          <li>Eight levels in three-month cycles, with a one-week trial to change level each term</li>
+          <li>Writes its own textbooks; staff act as guarantor for your flat</li>
+          <li>Working-holiday visa holders skip the registration fee</li>
+        </ul>
+        <ul class="sch-facts">
+          <li><b>Nearest station</b><span>Sannomiya (JR, Hankyu, Hanshin) 7 min</span></li>
+          <li><b>Student-visa intakes</b><span>January, April, July, October</span></li>
+          <li><b>Apply by</b><span>About 5 months before: end Oct, Feb, Apr, Aug</span></li>
+          <li><b>1 year, student visa</b><span>From ¥1,025,000 (materials and insurance extra; N2 halves the enrolment fee)</span></li>
+          <li><b>Short courses</b><span>1 month ¥90,000, 3 months ¥202,000</span></li>
+          <li><b>Housing</b><span>Share houses ¥30,000 to ¥60,000 a month, arranged by the school</span></li>
+          <li><b>Class hours</b><span>4 × 50 min a day, Mon to Fri; shift depends on level</span></li>
+          <li><b>To get in</b><span>High-school diploma, written test and interview; beginners accepted</span></li>
+        </ul>
+        <div class="sch-foot">
+          <a class="btn sm" href="#book" data-school="Communica Institute (Kobe)">Ask me about this school</a>
+          <a class="sch-site" href="https://www.communica-institute.org/en/" target="_blank" rel="noopener">School website</a>
+          <div class="sch-tako"><div class="speech-bubble">Kobe: half the rent of Tokyo, and the beef is better.</div><img src="img/tako/beer-toast.webp" alt="" width="64" height="64" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 京都民際日本語学校（写真・ロゴは許可待ち。許可が出たら .sch-tile を <img class="hero"> に差し替える） -->
+    <article class="sch reveal" id="sch-minsai">
+      <div class="sch-media">
+        <div class="sch-tile"><span class="sch-tile-city">KYOTO</span><img src="img/tako/eureka.webp" alt="" width="150" height="150" loading="lazy"><small>Photos coming soon</small></div>
+        <span class="sch-badge">Kyoto · west of the city centre</span>
+      </div>
+      <div class="sch-body">
+        <div class="sch-top">
+          <span class="sch-city">Kyoto</span>
+          <span class="sch-cert">MEXT-certified school</span>
+        </div>
+        <h3>Kyoto Minsai Japanese Language School<span class="jp" lang="ja">京都民際日本語学校</span></h3>
+        <p class="sch-why">The biggest of the five, with around 530 students from about 50 countries, and one of the few schools in Kyoto already certified under Japan's new national standard for Japanese-language schools (2025). The thing I'd point to first: it runs about 400 rooms of its own, so housing is solved on day one. Most classmates come from South and Southeast Asia, which means Japanese is the only language everyone in the room shares.</p>
+        <ul class="sch-pts">
+          <li>School-managed housing: shared rooms from ¥20,000, single rooms from ¥40,000 a month, furnished, internet included</li>
+          <li>Office staff speak English and nine other languages</li>
+          <li>Short courses of 2 to 10 weeks, Monday to Thursday, with a cultural activity every Friday</li>
+          <li>Classes capped at 20; JLPT prep built in, and the school pays your JLPT entry fee</li>
+        </ul>
+        <ul class="sch-facts">
+          <li><b>Nearest station</b><span>Hankyu Nishi-Kyogoku, about 12 min; short courses at a central campus</span></li>
+          <li><b>Student-visa intakes</b><span>January, April, July, October; 1 to 2 years</span></li>
+          <li><b>Apply by</b><span>20 Oct for April, 20 Feb for July, 10 May for October, 10 Sep for January</span></li>
+          <li><b>1 year, student visa</b><span>¥979,500 all-in (tuition, materials, tablet, insurance, health cover, JLPT fees)</span></li>
+          <li><b>Short courses</b><span>2 weeks ¥88,000, 4 weeks ¥176,000; studio from ¥4,000 a night</span></li>
+          <li><b>Class hours</b><span>4 × 45 min a day, Mon to Fri, morning or afternoon</span></li>
+          <li><b>To get in</b><span>High-school diploma, age 17+, A1-level Japanese, online interview</span></li>
+          <li><b>Immigration</b><span>Approved to sponsor student visas; MEXT-certified since 2025</span></li>
+        </ul>
+        <div class="sch-foot">
+          <a class="btn sm" href="#book" data-school="Kyoto Minsai Japanese Language School (Kyoto)">Ask me about this school</a>
+          <a class="sch-site" href="https://www.kyotominsai.co.jp/" target="_blank" rel="noopener">School website</a>
+          <div class="sch-tako"><div class="speech-bubble">Kyoto with a room already waiting. That's rare.</div><img src="img/tako/surprised-result.webp" alt="" width="64" height="64" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 九段日本文化研究所日本語学院 -->
+    <article class="sch reveal" id="sch-kudan">
+      <div class="sch-media">
+        <img class="hero" src="img/schools/kudan-class.jpg" alt="A class at Kudan Institute in Tokyo, the teacher at the whiteboard and students from several countries taking notes" width="1400" height="933" loading="lazy">
+        <div class="sch-thumbs">
+          <img src="img/schools/kudan-tea.jpg" alt="Kudan Institute students in yukata at a tea-ceremony lesson" width="1000" height="667" loading="lazy">
+          <img src="img/schools/kudan-manga.jpg" alt="A Kudan Institute student inking a manga page in the manga course" width="1000" height="667" loading="lazy">
+        </div>
+        <span class="sch-badge">Tokyo · 4 min from Suidobashi</span>
+      </div>
+      <div class="sch-body">
+        <div class="sch-top">
+          <img class="sch-logo" src="img/schools/kudan-logo.png" alt="Kudan Institute of Japanese Language and Culture logo" width="277" height="40" loading="lazy">
+          <span class="sch-city">Tokyo</span>
+        </div>
+        <h3>Kudan Institute of Japanese Language &amp; Culture<span class="jp" lang="ja">九段日本文化研究所日本語学院</span></h3>
+        <p class="sch-why">Probably the most mixed school in Tokyo: 30 to 40 nationalities in any given month, with roughly a third of students from Europe and North America (France is the biggest European group). Two tracks: a morning Conversation Course if you want to speak, and an afternoon Intensive Course if you're aiming at JLPT N2 or N1. Culture is part of the deal: tea ceremony, calligraphy, sushi, even a manga course.</p>
+        <ul class="sch-pts">
+          <li>Short-term students can start any Monday (except complete beginners), from 2 weeks</li>
+          <li>Conversation Course: 5 levels, 20 lessons a week, mornings only</li>
+          <li>After-class culture workshops for ¥1,000 to ¥2,000; bus trips twice a year included for visa students</li>
+          <li>Part-time job support with partner companies; website and support in 15 languages</li>
+        </ul>
+        <ul class="sch-facts">
+          <li><b>Nearest stations</b><span>JR Suidobashi 4 min, Jimbocho 8 min, Kudanshita 9 min</span></li>
+          <li><b>Student-visa intakes</b><span>January, April, July, October</span></li>
+          <li><b>1 year, student visa</b><span>Intensive ¥915,000, Conversation ¥1,059,000 (textbooks, insurance and visa support included)</span></li>
+          <li><b>Short courses</b><span>¥18,000 a week plus ¥20,000 registration: 4 weeks ¥102,000, 12 weeks ¥246,000</span></li>
+          <li><b>Housing</b><span>No dorm. Homestay ¥3,300 a night with meals; share house from ¥75,000 a month</span></li>
+          <li><b>Class hours</b><span>About 3.5 hours a day, Mon to Fri, morning or afternoon</span></li>
+          <li><b>To get in</b><span>Student visa: 18+, high-school diploma, JLPT N5 or above. Short courses: 16+</span></li>
+          <li><b>Immigration</b><span>Approved to sponsor student visas; teaching since 1988</span></li>
+        </ul>
+        <div class="sch-foot">
+          <a class="btn sm" href="#book" data-school="Kudan Institute (Tokyo)">Ask me about this school</a>
+          <a class="sch-site" href="https://www.kudan-japanese-school.com/en/" target="_blank" rel="noopener">School website</a>
+          <div class="sch-tako"><div class="speech-bubble">Tokyo, with tea ceremony on the side.</div><img src="img/tako/teacher-explanation.webp" alt="" width="64" height="64" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 東京工学院日本語学校（写真・ロゴは許可待ち） -->
+    <article class="sch reveal" id="sch-kogakuin">
+      <div class="sch-media">
+        <div class="sch-tile"><span class="sch-tile-city">TOKYO</span><img src="img/tako/determined-start.webp" alt="" width="150" height="150" loading="lazy"><small>Photos coming soon</small></div>
+        <span class="sch-badge">Tokyo · 3 min from Yoyogi</span>
+      </div>
+      <div class="sch-body">
+        <div class="sch-top">
+          <span class="sch-city">Tokyo</span>
+        </div>
+        <h3>Tokyo Kogakuin Japanese Language School<span class="jp" lang="ja">東京工学院日本語学校</span></h3>
+        <p class="sch-why">A small school (about 50 students, capacity 100) five minutes from Shinjuku station, run by the educational foundation behind two Tokyo vocational colleges. It has the longest school day of the five, five hours from 9:30 to 15:10, so you get through more in a year. The natural choice if you're thinking about a vocational college in Japan after your course.</p>
+        <ul class="sch-pts">
+          <li>Five hours a day, Monday to Friday: 1,000 class hours in the 1-year course</li>
+          <li>1-year (April), 1.5-year (October) and 2-year (April) courses, four levels plus electives</li>
+          <li>Career Center for job hunting; online open-campus sessions held in English</li>
+          <li>Teaching Japanese since 1971, so the paperwork is routine</li>
+        </ul>
+        <ul class="sch-facts">
+          <li><b>Nearest stations</b><span>JR Yoyogi 3 min, Shinjuku New South Exit 5 min</span></li>
+          <li><b>Student-visa intakes</b><span>April (1 or 2 years), October (1.5 years)</span></li>
+          <li><b>Apply by</b><span>30 Oct for April, 15 May for October</span></li>
+          <li><b>1 year, student visa</b><span>About ¥830,000 per the school's payment guide (I confirm the current figure before you apply)</span></li>
+          <li><b>Short courses</b><span>Only for people already in Japan on another visa, in 25-day blocks</span></li>
+          <li><b>Housing</b><span>No dorm; I'll help you find a share house nearby</span></li>
+          <li><b>To get in</b><span>High-school diploma, about 150 hours of Japanese study, online interview</span></li>
+          <li><b>Immigration</b><span>Approved to sponsor student visas</span></li>
+        </ul>
+        <div class="sch-foot">
+          <a class="btn sm" href="#book" data-school="Tokyo Kogakuin Japanese Language School (Tokyo)">Ask me about this school</a>
+          <a class="sch-site" href="https://www.technos-jpschool.com/" target="_blank" rel="noopener">School website</a>
+          <div class="sch-tako"><div class="speech-bubble">Five minutes from Shinjuku. Five hours a day.</div><img src="img/tako/determined-start.webp" alt="" width="64" height="64" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="band indigo">Fees are each school's published 2026–27 figures and change from time to time; I confirm the exact total for your course and intake before you pay anything. "Approved to sponsor student visas" means the school is on the Ministry of Justice list (告示校). Photos and logos are used with each school's permission.</div>
+    <div class="ln-mid-box reveal" style="margin-top:16px">
+      <img class="ln-mid-tako" src="img/tako/puzzled.webp" alt="" width="150" height="150" loading="lazy">
+      <div><b>None of these feel right?</b><span>That's fine. Tell me your level, budget and city and I'll shortlist others too, including schools that don't pay me.</span></div>
+      <a class="btn" href="#book">Get my school shortlist</a>
+    </div>
+  </div>
+</section>
+
+<section class="ln-sec">
+  <div class="wrap">
     <div class="h3s has-tako" id="after" data-tako="encouraging" data-side="right" data-bubble="You won't be on your own."><figure class="tako-mark"><img src="img/tako/encouraging.webp" alt="" width="74" height="74" loading="lazy"><figcaption>You won't be on your own.</figcaption></figure><div><h2>You won't land alone.</h2><p>Most agencies stop at the airport. That's where I start.</p></div></div>
     <div class="after">
       <figure class="reveal">
@@ -369,7 +588,7 @@
   <div class="wrap">
     <div class="h3s has-tako" id="faq" data-tako="puzzled" data-side="left" data-bubble="Got a question? Ask away."><figure class="tako-mark"><img src="img/tako/puzzled.webp" alt="" width="74" height="74" loading="lazy"><figcaption>Got a question? Ask away.</figcaption></figure><div><h2>Questions people ask me</h2></div></div>
     <details class="faq reveal" open><summary>Is it really free?</summary><p>Yes. The school pays me a referral fee from its marketing budget. You never pay me, and your tuition is unchanged.</p></details>
-    <details class="faq reveal"><summary>Do you only work with certain schools?</summary><p>No. If the right school doesn't pay me, I'll tell you, and you apply directly.</p></details>
+    <details class="faq reveal"><summary>Do you only work with certain schools?</summary><p>I have referral agreements with <a href="#schools">five schools</a> in Osaka, Kobe, Kyoto and Tokyo, but none of them is exclusive. If the right school for you isn't on that list, I'll tell you, and you apply directly.</p></details>
     <details class="faq reveal"><summary>Do I need to speak Japanese already?</summary><p>No. Schools have beginner classes, and we talk in English.</p></details>
     <details class="faq reveal"><summary>I'm already talking to another agency. Can I still ask?</summary><p>Yes. A second opinion costs nothing, and I won't contact a school unless you ask.</p></details>
     <details class="faq reveal"><summary>Can I come as a tourist and switch to a student visa in Japan?</summary><p>No. Immigration doesn't normally allow a change from a 90-day stay to a student visa. You go home, the school gets your COE, and you come back with the visa. Plan for it from the start.</p></details>
@@ -473,6 +692,19 @@
         </div>
 
         <div class="cf-row">
+          <label for="cf-school">A school you're interested in?</label>
+          <select id="cf-school" name="School of interest">
+            <option value="" selected>Not sure yet, show me options (optional)</option>
+            <option>Osaka YWCA College (Osaka)</option>
+            <option>Communica Institute (Kobe)</option>
+            <option>Kyoto Minsai Japanese Language School (Kyoto)</option>
+            <option>Kudan Institute (Tokyo)</option>
+            <option>Tokyo Kogakuin Japanese Language School (Tokyo)</option>
+            <option>A school not on your list</option>
+          </select>
+        </div>
+
+        <div class="cf-row">
           <label for="cf-found">Where did you find me?</label>
           <select id="cf-found" name="Found via">
             <option value="" selected>Please choose (optional)</option>
@@ -511,26 +743,46 @@
   <img id="follower-img" src="img/tako/lesson-intro.webp" alt="" width="120" height="120">
 </div>
 
-<footer>
+<footer class="ft">
   <div class="wrap">
     <div class="ln-foot-tako"><img src="img/tako/ookini-gratitude.webp" alt="" width="84" height="84" loading="lazy"><div class="speech-bubble">おおきに！ Ookini! Thanks for reading. <a href="#book">Say hello</a> whenever you're ready.</div></div>
-    <div class="fnav">
-      <a href="#why">Why KOTOHA?</a>
-      <a href="#who">Is this for you?</a>
-      <a href="#how">How it works</a>
-      <a href="#perk">Bonus</a>
-      <a href="#after">After you land</a>
-      <a href="#cost">Costs</a>
-      <a href="#visa">Visa &amp; timing</a>
-      <a href="#faq">FAQ</a>
-      <a href="#book">Get started</a>
-      <a href="index.html" lang="ja">日本語サイト（学校・事業者の方へ）</a>
+    <div class="top">
+      <div class="brand">
+        <img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28">
+        <p>Free school counselling in English, from a Japanese teacher living in Japan. I check your level myself, shortlist schools that fit, and stay reachable after you land.</p>
+      </div>
+      <div>
+        <h2>This page</h2>
+        <ul>
+          <li><a href="#why">Why KOTOHA?</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#schools">Schools</a></li>
+          <li><a href="#after">After you land</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Practical</h2>
+        <ul>
+          <li><a href="#cost">Costs</a></li>
+          <li><a href="#visa">Visa &amp; timing</a></li>
+          <li><a href="#perk">Bonus</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="#book">Get started</a></li>
+          <li><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">Instagram @helpmekansai</a></li>
+          <li><a href="index.html" lang="ja">日本語サイト（学校・事業者の方へ）</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="row">
-      <div><b style="font-family:Outfit,sans-serif;letter-spacing:.18em;color:var(--aka)">KOTOHA</b> ── ことは ／ Ryosuke Sakai, Japan ／ © 2026</div>
-      <div><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener" style="color:var(--gray)">Instagram @helpmekansai</a></div>
+    <div class="bot">
+      <div>© 2026 KOTOHA ── ことは ／ Ryosuke Sakai, Japan</div>
+      <div>Osaka ・ Kyoto ・ Online</div>
     </div>
-    <div class="src">"Kotoha" comes from koto-no-ha, an old Japanese word for "words". Cost ranges are approximate, based on published school fees, and change over time. Visa information is a general summary; the school and your local Japanese embassy or consulate are the official sources. Intake deadlines are typical dates; each school publishes its own. Working-holiday eligibility depends on your country's agreement with Japan. Canadays is a language-exchange community in Vancouver with which KOTOHA has a business agreement; event details are as announced by the organiser. Photos of scenery are from Unsplash (Unsplash License).</div>
+    <div class="src">"Kotoha" comes from koto-no-ha, an old Japanese word for "words". Cost ranges are approximate, based on published school fees, and change over time. Visa information is a general summary; the school and your local Japanese embassy or consulate are the official sources. Intake deadlines are typical dates; each school publishes its own. Working-holiday eligibility depends on your country's agreement with Japan. Canadays is a language-exchange community in Vancouver with which KOTOHA has a business agreement; event details are as announced by the organiser. Photos of scenery are from Unsplash (Unsplash License). School photos and logos are used with each school's permission; school fees and dates are the schools' published figures for 2026–27 and may change.</div>
   </div>
 </footer>
 
@@ -672,17 +924,15 @@
     addEventListener('scroll', tick, { passive: true }); addEventListener('resize', tick); tick();
   })();
 
-  function toggleNav(btn){
-    var n = document.getElementById('nav');
-    btn.setAttribute('aria-expanded', n.classList.toggle('open'));
-  }
-  document.querySelectorAll('#nav a').forEach(function(a){
+  /* ---- 学校カードの「Ask me about this school」：フォームの学校セレクトを先に選んでおく ---- */
+  document.querySelectorAll('[data-school]').forEach(function(a){
     a.addEventListener('click', function(){
-      document.getElementById('nav').classList.remove('open');
-      var b = document.querySelector('.burger');
-      if (b) b.setAttribute('aria-expanded','false');
+      var sel = document.getElementById('cf-school'); if (!sel) return;
+      for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].text === a.dataset.school) { sel.selectedIndex = i; break; } }
     });
   });
+  });
 </script>
+<script src="assets/site.js?v=20261028b"></script>
 </body>
 </html>

@@ -14,22 +14,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&amp;family=Outfit:wght@600;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261023">
+<link rel="stylesheet" href="assets/style.css?v=20261028b">
+<link rel="stylesheet" href="assets/site.css?v=20261028b">
 </head>
 <body>
-<div class="topbar"></div>
-<header class="site">
+<header class="hdr onHero" id="hdr">
   <div class="wrap">
     <a class="logo" href="index.html"><img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28"><small>ことは</small></a>
-    <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav" onclick="toggleNav(this)">MENU</button>
-    <nav class="main" id="nav">
-      <a href="index.html">ホーム</a>
+    <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav">
       <a href="schools.html">学校の方へ</a>
       <a class="active" href="sns.html">お店の方へ</a>
       <a href="teaching.html">講師になりたい方へ</a>
       <a href="works.html">実績</a>
       <a href="about.html">代表</a>
-      <a class="lang" href="learners.html"><b lang="en">Study in Japan</b><small>留学希望の方へ（英語）</small></a>
+      <a class="lang" href="learners.html">Study in Japan</a>
       <a class="cta" href="contact.html">お問い合わせ</a>
     </nav>
   </div>
@@ -61,7 +60,7 @@
 
 <section>
   <div class="wrap">
-    <div class="h3s" id="worry"><h2>外国人が、店に入る前に迷っている5つのこと</h2><p>日本語講師として、英語圏の生徒から毎週聞いている質問です</p></div>
+    <div class="h3s" id="worry"><div class="lbl">The problem</div><h2>外国人が、店に入る前に迷っている5つのこと</h2><p>日本語講師として、英語圏の生徒から毎週聞いている質問です</p></div>
     <div class="worry">
       <div><i>01</i><b>入り方</b><small>予約は要る？ 一人でも入れる？</small></div>
       <div><i>02</i><b>注文</b><small>英語メニューは？ おすすめは？</small></div>
@@ -73,7 +72,7 @@
 
     <div class="grid g2" style="margin-top:48px;align-items:center">
       <div>
-        <div class="h3s" style="margin-top:0"><h2>英語にするだけでなく、何を書くかから一緒に考えます。</h2><p>AI翻訳が身近になったいま、差がつくのは何を書くかです</p></div>
+        <div class="h3s" style="margin-top:0"><div class="lbl">Our approach</div><h2>英語にするだけでなく、何を書くかから一緒に考えます。</h2><p>AI翻訳が身近になったいま、差がつくのは何を書くかです</p></div>
         <div class="tblwrap"><table>
           <caption class="tcap">一般的な運用代行・AI翻訳と KOTOHA の比較</caption>
           <thead><tr><td></td><th scope="col">一般的な運用代行・AI翻訳</th><th scope="col" class="hi">KOTOHA</th></tr></thead>
@@ -95,7 +94,7 @@
       </div>
     </div>
 
-    <div class="h3s" id="method"><h2>投稿は、こうやって作ります</h2><p>1本の投稿で、ひとつの疑問に答えます。あれもこれも詰め込みません</p></div>
+    <div class="h3s" id="method"><div class="lbl">Method</div><h2>投稿は、こうやって作ります</h2><p>1本の投稿で、ひとつの疑問に答えます。あれもこれも詰め込みません</p></div>
     <div class="grid g3">
       <div class="card"><h3>① 何を書くか決める</h3><p>「予約は要りますか？」のような疑問をひとつ選びます。上の5つのように、外国人のお客さまが実際に困っていることです。お店の宣伝から始めません。</p></div>
       <div class="card indigo"><h3>② 写真5枚で答える</h3><p>1枚目に英語で質問を大きく出し、2〜4枚目で写真を見せながら英語と日本語で答えます。5枚目にお店の場所を入れます。英語が先、日本語も残します。日本語があると「地元のお店だ」と伝わります。</p></div>
@@ -103,7 +102,7 @@
     </div>
     <p class="note">細かい話：投稿には、写真の投稿と短い動画（リール）の2種類を使い分けます。写真はお店の情報を伝えるため、動画は雰囲気を伝えるためです。地図に店名が出る設定と英語のタグを付け、海外の朝と夜に届くよう時間を決めて出します。写真の明るさ調整や下書きはAIを使い、何を書くか・事実が合っているかは人が決めます。</p>
 
-    <div class="h3s" id="yours"><h2>お店にお願いすることは、3つだけです</h2><p>Instagram をお使いでない方も始められます</p></div>
+    <div class="h3s" id="yours"><div class="lbl">What we need</div><h2>お店にお願いすることは、3つだけです</h2><p>Instagram をお使いでない方も始められます</p></div>
     <div class="grid g3">
       <div class="card"><div class="tag">お願い01</div><h3>写真を送っていただく</h3><p>スマートフォンで撮ったもので十分です。明るさや切り抜きはこちらで整えます。足りない分は、何を撮ればよいかをお伝えします。</p></div>
       <div class="card indigo"><div class="tag">お願い02</div><h3>事実だけ確認していただく</h3><p>「予約は要るか」「カードは使えるか」など、こちらが書いた内容が合っているかの確認です。月に一度、10分ほどで終わります。</p></div>
@@ -111,7 +110,7 @@
     </div>
     <div class="band">アカウントをお持ちでなくても大丈夫です。開設と最初の設定は、下の「プロフィール整備」で承ります。英語での問い合わせやコメントへの返信も、こちらで担当します。お店の方が英語を使う場面はありません。</div>
 
-    <div class="h3s" id="price"><h2>料金は、まず単発で。合えば月額で。</h2><p>最初から月額契約をお願いしません。一度きりの制作から始められます</p></div>
+    <div class="h3s" id="price"><div class="lbl">Pricing</div><h2>料金は、まず単発で。合えば月額で。</h2><p>最初から月額契約をお願いしません。一度きりの制作から始められます</p></div>
     <h3 class="plan-h">入口：単発制作（一度きり・月額契約なし）</h3>
     <div class="grid g4">
       <div class="price"><h3>英語メニュー</h3><div class="amt">3万円<small>〜</small></div><ul><li>写真付き</li><li>料理名の直訳ではなく「何が入っていて、どう食べるか」</li></ul></div>
@@ -127,7 +126,7 @@
     </div>
     <div class="band">月額は飲食店の料金です。宿・体験事業者は 4万円／9万円／15万円。最低3か月、以後1か月ごと。1か月前の連絡で終了できます。単発制作の代金は、月額に移行するとき初月から差し引きます。成果はお約束しません。代わりに、数字を毎朝お見せします。Instagram 経由の来店・予約・問い合わせ件数を、契約時にオーナーと決めます。</div>
 
-    <div class="h3s" id="flow"><h2>進め方は、まず1本の無料サンプルから</h2><p>見てから決めていただけます</p></div>
+    <div class="h3s" id="flow"><div class="lbl">Process</div><h2>進め方は、まず1本の無料サンプルから</h2><p>見てから決めていただけます</p></div>
     <div class="steps four">
       <div class="step"><b>お店を見る</b><p>Googleマップの英語口コミと Instagram を拝見し、外国人が困っていそうな点を見つけます。</p></div>
       <div class="step"><b>投稿を1本作る</b><p>その店専用のサンプル投稿を無料でお送りします。お気に召さなければ、それで終わりで構いません。</p></div>
@@ -143,39 +142,51 @@
 </section>
 
 
-<footer>
+<footer class="ft">
   <div class="wrap">
-    <div class="fnav">
-      <a href="index.html">ホーム</a>
-      <a href="index.html#mission">理念</a>
-      <a href="schools.html">学校の方へ</a>
-      <a href="sns.html">お店の方へ</a>
-      <a href="teaching.html">講師になりたい方へ</a>
-      <a href="works.html">実績</a>
-      <a href="about.html">代表</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="learners.html">Study in Japan (English)</a>
+    <div class="top">
+      <div class="brand">
+        <img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28">
+        <p>言葉の壁をなくし、世界の人が日本を「地元の人」のように楽しめる世界へ。日本語講師 × SNS運用 × 海外営業。大阪の個人事業です。</p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="schools.html">学校の方へ</a></li>
+          <li><a href="sns.html">お店の方へ</a></li>
+          <li><a href="teaching.html">講師になりたい方へ</a></li>
+          <li><a href="learners.html">Study in Japan（English）</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>About</h2>
+        <ul>
+          <li><a href="index.html#mission">理念</a></li>
+          <li><a href="works.html">実績</a></li>
+          <li><a href="about.html">代表</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">Instagram @helpmekansai</a></li>
+          <li><a href="mailto:kotohajapan.info@gmail.com">kotohajapan.info@gmail.com</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="row">
-      <div><b style="font-family:Outfit,sans-serif;letter-spacing:.18em;color:var(--aka)">KOTOHA</b> ── ことは ／ 酒井 涼介（個人事業）／ 大阪 ／ © 2026</div>
-      <div><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener" style="color:var(--gray)">Instagram @helpmekansai</a></div>
+    <div class="bot">
+      <div>© 2026 KOTOHA ── ことは ／ 酒井 涼介（個人事業）／ 大阪</div>
+      <div>Osaka ・ Kyoto ・ Online</div>
     </div>
     <div class="src">料金・工数・社数は計画値です。「一般的な運用代行会社」は、国内向け中心の会社の傾向を調査範囲でまとめたもので、すべての会社に当てはまるものではありません。料理・風景の写真は Unsplash（Unsplash License）で、実際の提供内容を示すものではありません。</div>
   </div>
 </footer>
 
 <script>
-  function toggleNav(btn){
-    var n = document.getElementById('nav');
-    btn.setAttribute('aria-expanded', n.classList.toggle('open'));
-  }
-  document.querySelectorAll('#nav a').forEach(function(a){
-    a.addEventListener('click', function(){
-      document.getElementById('nav').classList.remove('open');
-      var b = document.querySelector('.burger');
-      if (b) b.setAttribute('aria-expanded','false');
-    });
   });
 </script>
+<script src="assets/site.js?v=20261028b"></script>
 </body>
 </html>

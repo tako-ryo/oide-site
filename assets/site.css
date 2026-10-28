@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* ============================================================
+   KOTOHA ── 刷新レイヤー（style.css のあとに読み込みます）
+   既存の部品名はそのまま使い、見た目と余白だけを更新しています。
+   色は style.css の :root と同じ値です。
+   ============================================================ */
+:root{
+  --navy:#17202B;
+  --max:1280px; --gut:clamp(20px,4vw,56px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --en:Outfit,"Noto Sans JP",sans-serif;
+}
+html{scroll-padding-top:96px}
+.wrap{max-width:var(--max);padding:0 var(--gut)}
+
+/* ---------- 出現アニメーション ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.shot .rv{opacity:1;transform:none;transition:none}
+
+/* ---------- ヘッダー ---------- */
+.topbar{display:none}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .4s,backdrop-filter .4s,box-shadow .4s}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.hdr .logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.hdr .logo img{height:26px;width:auto;display:block;transition:filter .3s}
+.hdr .logo small{font-size:11px;letter-spacing:.24em;font-weight:700;color:var(--indigo);transition:color .3s}
+.hdr nav{display:flex;align-items:center;gap:clamp(16px,2vw,30px)}
+.hdr nav a{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--ink);text-decoration:none;position:relative;padding:6px 0;white-space:nowrap;transition:color .3s}
+.hdr nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.hdr nav a:hover::after,.hdr nav a.active::after{transform:scaleX(1);transform-origin:left}
+.hdr nav a.active{color:var(--aka)}
+.hdr nav a.lang{font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+.hdr nav a.cta{display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;transition:background .3s,color .3s}
+.hdr nav a.cta::after{display:none}
+.hdr nav a.cta:hover{background:var(--aka)}
+.hdr.onHero .logo img{filter:brightness(0) invert(1)}
+.hdr.onHero .logo small,.hdr.onHero nav a{color:#fff}
+.hdr.onHero nav a.active{color:#FFB9A7}
+.hdr.onHero nav a.cta{background:#fff;color:var(--ink)}
+.hdr.onHero nav a.cta:hover{background:var(--aka);color:#fff}
+.hdr.solid{background:rgba(255,248,240,.88);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 1px 0 rgba(42,35,32,.08)}
+.hdr.solid .wrap{height:64px}
+.hdr .burger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;position:relative;z-index:70;padding:0}
+.hdr .burger span{position:absolute;left:10px;right:10px;height:2px;background:var(--ink);transition:transform .4s var(--ease),opacity .3s,background .3s}
+.hdr .burger span:nth-child(1){top:16px}.hdr .burger span:nth-child(2){top:22px}.hdr .burger span:nth-child(3){top:28px}
+.hdr.onHero .burger span{background:#fff}
+.hdr.open .burger span{background:var(--ink)}
+.hdr.open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hdr.open .burger span:nth-child(2){opacity:0}
+.hdr.open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:1060px){
+  .hdr .burger{display:block}
+  .hdr nav{position:fixed;inset:0;background:var(--cream);flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;padding:0 var(--gut);transform:translateY(-100%);opacity:0;transition:transform .55s var(--ease),opacity .4s;z-index:65;overflow-y:auto}
+  .hdr.open nav{transform:none;opacity:1}
+  .hdr nav a{font-size:clamp(20px,5vw,26px);font-weight:800;color:var(--ink)!important;padding:10px 0}
+  .hdr nav a::after{display:none}
+  .hdr nav a.active{color:var(--aka)!important}
+  .hdr nav a.lang{font-size:14px;margin-top:16px}
+  .hdr nav a.cta{margin-top:20px;height:56px;padding:0 28px;font-size:16px;background:var(--aka)!important;color:#fff!important}
+  .hdr .logo{position:relative;z-index:70}
+  .hdr.open .logo img{filter:none}.hdr.open .logo small{color:var(--indigo)}
+}
+
+/* ---------- 下層ページのヒーロー ---------- */
+.phero{padding:188px 0 clamp(72px,9vw,120px);min-height:clamp(440px,56vw,620px);display:flex;align-items:flex-end}
+.phero .wrap{width:100%}
+.phero .bg{transform:scale(1.06);animation:pheroZoom 10s var(--ease) forwards}
+@keyframes pheroZoom{to{transform:scale(1)}}
+.shot .phero .bg{animation:none;transform:none}
+.phero .shade{background:linear-gradient(180deg,rgba(28,20,18,.45) 0%,rgba(28,20,18,.3) 35%,rgba(28,20,18,.86) 100%)}
+.phero.blue .shade{background:linear-gradient(180deg,rgba(23,32,43,.5) 0%,rgba(23,32,43,.3) 35%,rgba(23,32,43,.88) 100%)}
+.phero .eyebrow{font-size:12px;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.9);gap:14px}
+.phero .eyebrow::before{width:40px;height:1px;background:#fff;opacity:.7}
+.phero h1{font-size:clamp(30px,4.6vw,60px);line-height:1.18;letter-spacing:-.01em;margin:22px 0 0;max-width:19em}
+.phero h1+p,.phero p{font-size:clamp(15px,1.15vw,17px);line-height:2;color:rgba(255,255,255,.88);max-width:46em;margin-top:22px}
+.phero .btns{margin-top:32px;gap:14px}
+.phero .rp-hero-tags{margin-top:24px}
+@media(max-width:860px){.phero{padding:140px 0 56px;min-height:0}}
+
+/* ---------- セクションの余白 ---------- */
+section{padding:clamp(84px,10vw,140px) 0}
+@media(max-width:768px){section{padding:72px 0}}
+.toc{position:sticky;top:64px;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(10px)}
+.toc a{transition:border-color .3s,color .3s,background .3s}
+
+/* ---------- 見出し ---------- */
+.h3s{margin:clamp(64px,8vw,104px) 0 clamp(24px,3vw,36px);position:relative}
+.h3s:first-child{margin-top:0}
+.h3s h2{font-size:clamp(25px,3vw,40px);font-weight:800;line-height:1.3;letter-spacing:-.005em;max-width:24em}
+.h3s p{font-size:15px;color:var(--gray);font-weight:400;line-height:2;margin-top:14px;max-width:48em}
+h2{font-size:clamp(26px,3vw,40px);font-weight:800;letter-spacing:-.005em;line-height:1.3}
+.sec-label{font-weight:700;font-size:12px;letter-spacing:.05em;gap:12px}
+.sec-label::before{width:24px;height:1px;border-radius:0;background:var(--aka)}
+
+/* ---------- ボタン ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.01em;border:1px solid transparent;box-shadow:none;transition:transform .35s var(--ease),background .25s,color .25s,border-color .25s}
+.btn::after{content:"";width:16px;height:16px;flex:none;background:currentColor;
+  -webkit-mask:no-repeat center/16px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Cpath d='M3 8h10M9 4l4 4-4 4'/%3E%3C/svg%3E");
+  mask:no-repeat center/16px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Cpath d='M3 8h10M9 4l4 4-4 4'/%3E%3C/svg%3E");
+  transition:transform .35s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover::after{transform:translateX(4px)}
+.btn.sm{min-height:44px;padding:0 20px;font-size:14px}
+.btn.sm::after{width:14px;height:14px}
+
+/* ---------- カード・箱 ---------- */
+.card,.box,.pcard,.step,.merit{border-color:var(--line);border-radius:10px}
+.card,.box{padding:clamp(22px,2.4vw,30px)}
+a.card{transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .3s}
+a.card:hover{transform:translateY(-5px);box-shadow:0 30px 50px -30px rgba(42,35,32,.35);border-color:transparent}
+.pcard{overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .3s}
+.pcard img{transition:transform 1s var(--ease)}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 30px 50px -30px rgba(42,35,32,.35);border-color:transparent}
+.pcard:hover img{transform:scale(1.05)}
+.pcard .num{font-family:var(--en);font-weight:600;letter-spacing:.05em;font-size:12px;text-transform:uppercase}
+.pcard h3{font-size:19px;letter-spacing:-.005em}
+.band{border-radius:10px;padding:22px 26px;font-weight:400;line-height:1.95}
+.band b,.band strong{font-weight:700}
+.steps{gap:14px}
+.step{padding:22px 20px;transition:transform .45s var(--ease),border-color .3s}
+.step:hover{transform:translateY(-3px);border-color:rgba(42,35,32,.2)}
+.step::before{font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.18em}
+.step b{font-size:16px;margin-top:8px}
+.faq{border-radius:10px}
+.cta-inline{background:var(--aka);border-radius:14px;padding:clamp(32px,4vw,52px);position:relative;overflow:hidden;margin-top:clamp(48px,6vw,80px)}
+.cta-inline::after{content:"KOTOHA";position:absolute;right:-1.5vw;bottom:-5.5vw;font-family:var(--en);font-weight:800;font-size:18vw;line-height:1;letter-spacing:-.04em;color:rgba(255,255,255,.08);pointer-events:none}
+.cta-inline>*{position:relative}
+.cta-inline h3{font-size:clamp(22px,2.6vw,34px);font-weight:800;letter-spacing:-.005em;line-height:1.35;margin-bottom:10px}
+.cta-inline p{font-size:15px;line-height:2}
+.cta-inline .btn{background:#fff;color:var(--aka);border-color:#fff;box-shadow:none}
+.cta-inline .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* ---------- フッター ---------- */
+.ft{background:var(--navy);color:rgba(255,255,255,.72);padding:clamp(56px,7vw,80px) 0 36px}
+.ft .top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:clamp(40px,5vw,56px);border-bottom:1px solid rgba(255,255,255,.1)}
+.ft .brand img{height:26px;width:auto;filter:brightness(0) invert(1);opacity:.95}
+.ft .brand p{font-size:13px;line-height:1.95;margin:18px 0 0;max-width:30em}
+.ft h2{margin:0 0 16px;font-family:var(--en);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#F3B8A8;font-weight:600}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ft ul a{font-size:14px;color:rgba(255,255,255,.8);text-decoration:none;transition:color .3s}
+.ft ul a:hover{color:#fff}
+.ft .bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.66)}
+.ft .src{font-size:11px;line-height:1.85;color:rgba(255,255,255,.62);margin-top:22px;max-width:76em}
+.ft .src a{color:rgba(255,255,255,.72)}
+@media(max-width:860px){.ft .top{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.ft .top{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- 英語ページ（learners）の微調整 ---------- */
+.en-body .hdr nav a{letter-spacing:.01em}
+.ln-sticky,.rp-sticky{z-index:55}
+
+/* ---------- 既存ページの個別調整 ---------- */
+.lead-split h2,.floors h3{letter-spacing:-.005em}
+.merits .merit i{font-family:var(--en);font-weight:600;letter-spacing:.08em}
+.kpis b,.ig-nums b,.proof b{font-family:var(--en);letter-spacing:-.02em}
+.rp-head h2{font-size:clamp(26px,3vw,40px);letter-spacing:-.005em}
+.rp-hero h1{letter-spacing:-.01em}
+
+/* ---------- 見出しの英字ラベル（index と同じ作法を全ページへ） ---------- */
+.lbl{display:flex;align-items:center;gap:14px;font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--aka);margin-bottom:18px}
+.lbl::before{content:"";width:28px;height:1px;background:var(--aka);flex:none}
+.lbl.light{color:#F3B8A8}.lbl.light::before{background:#F3B8A8}
+.h3s .lbl{margin-bottom:16px}
+.h3s.has-tako .lbl{margin-bottom:12px}
+
+/* ---------- 特商法など、写真のないページの見出し ---------- */
+.ptitle{background:var(--navy);color:#fff;padding:168px 0 clamp(56px,7vw,88px)}
+.ptitle .lbl{color:#F3B8A8;margin-bottom:20px}
+.ptitle .lbl::before{background:#F3B8A8}
+.ptitle h1{color:#fff;font-size:clamp(28px,3.6vw,48px);font-weight:800;letter-spacing:-.01em;line-height:1.3}
+.ptitle p{color:rgba(255,255,255,.8);font-size:15px;line-height:2;margin:18px 0 0;max-width:46em}
+@media(max-width:860px){.ptitle{padding:128px 0 56px}}
+
+/* ---------- カード内の見出しの詰め ---------- */
+.card h3,.box h3,.box h4{letter-spacing:-.003em}
+.merit b,.step b,.floor h3{letter-spacing:-.003em}
+
+/* ---------- ヒーロー最上部の薄い影（ヘッダーの文字を必ず読めるように） ---------- */
+.hero::before,.phero::before,.rp-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:200px;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(16,22,30,.62) 0%,rgba(16,22,30,.28) 45%,rgba(16,22,30,0) 100%)}
+.hero > .wrap,.phero > .wrap,.rp-hero > .wrap{position:relative;z-index:1}
+
+/* ---------- 日本語の折り返しを文節単位に（対応ブラウザのみ） ---------- */
+.h3s p,.phero p,.ptitle p,.sub,.band,.note,.card p,.box p,.step p,.merit p,.cta-inline p{word-break:auto-phrase}
+
+/* ---------- 共通：大見出しとテキストリンク ---------- */
+.h2{font-size:clamp(28px,3.4vw,46px);font-weight:800;letter-spacing:-.005em;line-height:1.3;margin-top:22px}
+.h2.light{color:#fff}
+.link{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--ink);text-decoration:none;position:relative}
+.link::before{content:"";position:absolute;left:0;right:22px;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.link:hover::before{transform:scaleX(1)}
+.link::after{content:"";width:14px;height:14px;flex:none;background:currentColor;
+  -webkit-mask:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Cpath d='M3 8h10M9 4l4 4-4 4'/%3E%3C/svg%3E");
+  mask:no-repeat center/14px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Cpath d='M3 8h10M9 4l4 4-4 4'/%3E%3C/svg%3E");
+  transition:transform .35s var(--ease)}
+.link:hover::after{transform:translateX(4px)}
+/* ブロック全体がリンクのとき、中の文字に下線を出さない */
+a.card,a.pcard,a.row,a.audcard,a.rm-card{text-decoration:none;color:inherit}
+a.card *,a.pcard *,a.row *,a.audcard *{text-decoration:none}
+
+/* ---------- 細い枠＋大きなぼかし影の重ねをやめる（どちらか一方で立たせる） ---------- */
+.ln-reasons article.hi{box-shadow:none}
+.card .thumb img{box-shadow:0 8px 18px -10px rgba(42,35,32,.28)}
+.sec-label{letter-spacing:.04em}
+.pcard .num{letter-spacing:.04em}
+/* 枠のあるカードは、静止時は影なし。浮かせるのはホバーのときだけ */
+.card,.box,.pcard,.step,.merit,.faq,.cform,.sch,.ln-reasons article,.rp-days > *,.rp-perks > *{box-shadow:none}
+.cform.ln-form{box-shadow:none}
+.lp-shot img{box-shadow:none}

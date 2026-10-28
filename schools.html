@@ -14,22 +14,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&amp;family=Outfit:wght@600;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261023">
+<link rel="stylesheet" href="assets/style.css?v=20261028b">
+<link rel="stylesheet" href="assets/site.css?v=20261028b">
 </head>
 <body>
-<div class="topbar"></div>
-<header class="site">
+<header class="hdr onHero" id="hdr">
   <div class="wrap">
     <a class="logo" href="index.html"><img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28"><small>ことは</small></a>
-    <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav" onclick="toggleNav(this)">MENU</button>
-    <nav class="main" id="nav">
-      <a href="index.html">ホーム</a>
+    <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav">
       <a class="active" href="schools.html">学校の方へ</a>
       <a href="sns.html">お店の方へ</a>
       <a href="teaching.html">講師になりたい方へ</a>
       <a href="works.html">実績</a>
       <a href="about.html">代表</a>
-      <a class="lang" href="learners.html"><b lang="en">Study in Japan</b><small>留学希望の方へ（英語）</small></a>
+      <a class="lang" href="learners.html">Study in Japan</a>
       <a class="cta" href="contact.html">お問い合わせ</a>
     </nav>
   </div>
@@ -76,7 +75,7 @@
       </div>
     </div>
 
-    <div class="h3s" id="who"><h2>KOTOHA が紹介できる学習者</h2><p>新しく集客するのではなく、すでに接点のある方にお声がけします</p></div>
+    <div class="h3s" id="who"><div class="lbl">Reach</div><h2>KOTOHA が紹介できる学習者</h2><p>新しく集客するのではなく、すでに接点のある方にお声がけします</p></div>
     <div class="persona">
       <div><small>接点 01</small><b>オンラインレッスンの生徒</b><p>英語圏（北米・オセアニア・欧州など）の日本語学習者。講師として毎週会っているので、いまのレベルや学習のペースを把握したうえでご紹介できます。</p></div>
       <div><small>接点 02</small><b>@helpmekansai の読者</b><p>関西弁と標準語の違いを英語で解説する Instagram。閲覧の86%が海外から。「地元の人のように日本を楽しみたい」層に直接届きます。</p></div>
@@ -110,7 +109,7 @@
       </div>
     </div>
 
-    <div class="h3s" id="canadays"><h2>接点03　バンクーバーの言語交換コミュニティ「Canadays」</h2><p>オンラインに加えて、日本語を学びたい方に対面でも会っています</p></div>
+    <div class="h3s" id="canadays"><div class="lbl">Community</div><h2>接点03　バンクーバーの言語交換コミュニティ「Canadays」</h2><p>オンラインに加えて、日本語を学びたい方に対面でも会っています</p></div>
     <div class="showcase cd">
       <div class="banners">
         <figure>
@@ -142,7 +141,7 @@
       </div>
     </div>
 
-    <div class="h3s" id="system"><h2>学生の手数料は0円、学校は成功報酬です</h2><p>学生の負担を増やさずに、学校とつながる仕組みです</p></div>
+    <div class="h3s" id="system"><div class="lbl">How it works</div><h2>学生の手数料は0円、学校は成功報酬です</h2><p>学生の負担を増やさずに、学校とつながる仕組みです</p></div>
     <div class="floors">
       <div class="floor">
         <div class="lvl">1F</div>
@@ -158,7 +157,7 @@
       </div>
     </div>
 
-    <div class="h3s" id="merit"><h2>学校にとってのメリット</h2><p>「送客」だけではなく、英語での入口を一緒に作ります</p></div>
+    <div class="h3s" id="merit"><div class="lbl">Benefits</div><h2>学校にとってのメリット</h2><p>「送客」だけではなく、英語での入口を一緒に作ります</p></div>
     <div class="merits">
       <div class="merit"><i>01</i><b>英語対応の負担が増えません</b><p>問い合わせから出願前の細かな質問まで、英語でのやり取りはこちらで担当します。学生からの質問はまず KOTOHA が答え、貴校への確認が必要なことだけをまとめて、日本人の担当者（酒井）が日本語でお問い合わせします。海外の仲介会社のように、時差や言葉の壁で話が止まることがありません。</p></div>
       <div class="merit"><i>02</i><b>入学後のミスマッチが減ります</b><p>「このコースで、いまのレベルから伸びそうか」を英語で確認したうえで、レベル・目的・希望時期をそえてご紹介します。</p></div>
@@ -166,7 +165,7 @@
       <div class="merit"><i>04</i><b>英語での集客もお任せいただけます<span class="opt">オプション</span></b><p>「英語での発信まで手が回らない」というお話をよくうかがいます。貴校の Instagram や英語ページの整備も、外国人向け SNS運用代行として承れます。</p></div>
     </div>
 
-    <div class="h3s" id="meetup"><h2>ご紹介した学生は、教室の外でも日本語を使えます</h2><p>KOTOHA からご紹介した学生への特典です。貴校のご負担はありません</p></div>
+    <div class="h3s" id="meetup"><div class="lbl">Student perks</div><h2>ご紹介した学生は、教室の外でも日本語を使えます</h2><p>KOTOHA からご紹介した学生への特典です。貴校のご負担はありません</p></div>
     <div class="grid g3">
       <div class="card">
         <div class="tag">特典01　日本にいるあいだ</div>
@@ -211,7 +210,7 @@
       </div>
     </div>
 
-    <div class="h3s" id="flow"><h2>ご紹介の流れ</h2><p>初回は、貴校のコースと受け入れ条件をお聞かせください</p></div>
+    <div class="h3s" id="flow"><div class="lbl">Process</div><h2>ご紹介の流れ</h2><p>初回は、貴校のコースと受け入れ条件をお聞かせください</p></div>
     <div class="steps">
       <div class="step"><b>学校情報のヒアリング</b><p>コース・入学時期・費用・寮や住まい・英語対応の有無・受け入れたい学生像をお聞きします。オンライン30分。</p><small>初回・無料</small></div>
       <div class="step"><b>学習者へのカウンセリング</b><p>レベル・目的・期間・予算を英語で聞き取り、合いそうな学校を数校に絞ります。</p><small>英語で実施</small></div>
@@ -227,7 +226,7 @@
       <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="夕暮れの京都・清水寺の三重塔と市街" loading="lazy">
     </div>
 
-    <div class="h3s" id="faq"><h2>学校の方からよくいただく質問</h2></div>
+    <div class="h3s" id="faq"><div class="lbl">FAQ</div><h2>学校の方からよくいただく質問</h2></div>
     <details class="faq" open><summary>紹介料はいくらですか。</summary><p>入学が確定してからの成功報酬です。金額と条件は、学校のコース・期間（短期／長期）に合わせて個別にご相談します。専属契約はお願いしませんので、他のエージェントや直接募集と並行してご利用いただけます。</p></details>
     <details class="faq"><summary>どの国の学生を紹介できますか。</summary><p>英語で相談できる学習者が中心です。カナダ・アメリカ・オーストラリア・イギリスなどの英語圏のほか、英語で日本語を学んでいるアジア・欧州・南米の方も含みます。オンラインレッスンの生徒、Instagram（海外閲覧86%）の読者、そしてバンクーバーの言語交換コミュニティ Canadays が主な接点です。</p></details>
     <details class="faq"><summary>年間で何人くらい紹介できますか。</summary><p>人数のお約束はしていません。多く送ることよりも、学校の方針に合う学習者を一人ずつ見極めてご紹介し、入学後の様子までご報告することを大切にしています。合う学習者をご案内するために、まずは貴校のコースの特徴を教えていただけますと幸いです。</p></details>
@@ -245,39 +244,51 @@
 </section>
 
 
-<footer>
+<footer class="ft">
   <div class="wrap">
-    <div class="fnav">
-      <a href="index.html">ホーム</a>
-      <a href="index.html#mission">理念</a>
-      <a href="schools.html">学校の方へ</a>
-      <a href="sns.html">お店の方へ</a>
-      <a href="teaching.html">講師になりたい方へ</a>
-      <a href="works.html">実績</a>
-      <a href="about.html">代表</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="learners.html">Study in Japan (English)</a>
+    <div class="top">
+      <div class="brand">
+        <img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28">
+        <p>言葉の壁をなくし、世界の人が日本を「地元の人」のように楽しめる世界へ。日本語講師 × SNS運用 × 海外営業。大阪の個人事業です。</p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="schools.html">学校の方へ</a></li>
+          <li><a href="sns.html">お店の方へ</a></li>
+          <li><a href="teaching.html">講師になりたい方へ</a></li>
+          <li><a href="learners.html">Study in Japan（English）</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>About</h2>
+        <ul>
+          <li><a href="index.html#mission">理念</a></li>
+          <li><a href="works.html">実績</a></li>
+          <li><a href="about.html">代表</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">Instagram @helpmekansai</a></li>
+          <li><a href="mailto:kotohajapan.info@gmail.com">kotohajapan.info@gmail.com</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="row">
-      <div><b style="font-family:Outfit,sans-serif;letter-spacing:.18em;color:var(--aka)">KOTOHA</b> ── ことは ／ 酒井 涼介（個人事業）／ 大阪 ／ © 2026</div>
-      <div><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener" style="color:var(--gray)">Instagram @helpmekansai</a></div>
+    <div class="bot">
+      <div>© 2026 KOTOHA ── ことは ／ 酒井 涼介（個人事業）／ 大阪</div>
+      <div>Osaka ・ Kyoto ・ Online</div>
     </div>
     <div class="src">「ことは」＝「言の葉」から。言葉を意味する古い言い方です。／ 出典：国際交流基金 2024年度 海外日本語教育機関調査（2025年9月公表）、@helpmekansai インサイト（本人提供・各指標は集計時点の値）。紹介料・条件は個別のご相談です。Canadays はバンクーバーの言語交換コミュニティで、イベント情報は主催者の告知によります。風景・教室の写真は Unsplash（Unsplash License）。</div>
   </div>
 </footer>
 
 <script>
-  function toggleNav(btn){
-    var n = document.getElementById('nav');
-    btn.setAttribute('aria-expanded', n.classList.toggle('open'));
-  }
-  document.querySelectorAll('#nav a').forEach(function(a){
-    a.addEventListener('click', function(){
-      document.getElementById('nav').classList.remove('open');
-      var b = document.querySelector('.burger');
-      if (b) b.setAttribute('aria-expanded','false');
-    });
   });
 </script>
+<script src="assets/site.js?v=20261028b"></script>
 </body>
 </html>

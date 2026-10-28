@@ -13,179 +13,319 @@
 <link rel="apple-touch-icon" href="img/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&amp;family=Outfit:wght@600;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261023">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=20261028b">
+<link rel="stylesheet" href="assets/site.css?v=20261028b">
+<link rel="stylesheet" href="assets/home.css?v=20261028b">
 </head>
-<body>
-<div class="topbar"></div>
-<header class="site">
+<body class="home">
+
+<header class="hdr onHero" id="hdr">
   <div class="wrap">
     <a class="logo" href="index.html"><img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28"><small>ことは</small></a>
-    <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav" onclick="toggleNav(this)">MENU</button>
-    <nav class="main" id="nav">
-      <a class="active" href="index.html">ホーム</a>
+    <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav">
       <a href="schools.html">学校の方へ</a>
       <a href="sns.html">お店の方へ</a>
       <a href="teaching.html">講師になりたい方へ</a>
       <a href="works.html">実績</a>
       <a href="about.html">代表</a>
-      <a class="lang" href="learners.html"><b lang="en">Study in Japan</b><small>留学希望の方へ（英語）</small></a>
+      <a class="en" href="learners.html">Study in Japan</a>
       <a class="cta" href="contact.html">お問い合わせ</a>
     </nav>
   </div>
 </header>
 
-<div class="hero">
-  <img class="bg" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=2000&amp;q=75" alt="" fetchpriority="high">
+<!-- ヒーロー -->
+<section class="hero" id="top">
+  <img class="bg" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=2400&amp;q=78" alt="" fetchpriority="high">
   <div class="shade"></div>
-  <div class="wrap"><div class="inner">
-    <div class="eyebrow">日本語 × SNS で、言葉の壁をなくす（大阪）</div>
-    <h1>言葉の壁をなくし、<br>世界の人が日本を<br><em>「地元の人」のように</em><br>楽しめる世界へ。</h1>
-    <p class="lead">日本語学校には英語圏の留学生を。飲食店・宿には外国人のお客さまを。日本語を学ぶ人には、使える日本語を。KOTOHA は、言葉の壁の両側に立つ、大阪の個人事業です。</p>
-    <div class="btns">
-      <a class="btn" href="schools.html">日本語学校の方へ（留学支援）</a>
-      <a class="btn ghost" href="sns.html">飲食店・宿の方へ（SNS運用）</a>
+  <div class="wrap">
+    <div>
+      <h1>
+        <span class="ln"><span>言葉の壁をなくし、</span></span>
+        <span class="ln"><span>世界の人が日本を</span></span>
+        <span class="ln"><span><em>「地元の人」のように</em>楽しめる世界へ。</span></span>
+      </h1>
+      <p class="lead">日本語学校には英語圏の留学生を。飲食店・宿には外国人のお客さまを。日本語を学ぶ人には、使える日本語を。KOTOHA は、言葉の壁の両側に立つ、大阪の個人事業です。</p>
+      <div class="btns">
+        <a class="btn" href="schools.html">日本語学校の方へ</a>
+        <a class="btn ghost onDark" href="sns.html">飲食店・宿の方へ</a>
+      </div>
     </div>
-    <div class="tags"><span>日本語講師</span><span>SNS運用</span><span>海外営業3年</span><span>英語対応</span><span>大阪・京都・オンライン</span></div>
-  </div></div>
+    <div class="side">
+      <span class="city">Osaka, Japan</span>
+      <div class="scroll"><span>Scroll</span><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 流れるストリップ -->
+<div class="marq" aria-hidden="true">
+  <div class="track">
+    <ul>
+      <li><span class="en">Study Abroad</span>日本語学校への留学支援</li>
+      <li><span class="en">Instagram</span>外国人向けSNS運用</li>
+      <li><span class="en">Teaching</span>オンライン日本語講師</li>
+      <li><span class="en">Apps</span>Tako Talk ／ Lanclo</li>
+      <li><span class="en">Roadmap</span>日本語講師の30日ロードマップ</li>
+      <li><span class="en">Osaka</span>大阪・京都・オンライン</li>
+    </ul>
+    <ul>
+      <li><span class="en">Study Abroad</span>日本語学校への留学支援</li>
+      <li><span class="en">Instagram</span>外国人向けSNS運用</li>
+      <li><span class="en">Teaching</span>オンライン日本語講師</li>
+      <li><span class="en">Apps</span>Tako Talk ／ Lanclo</li>
+      <li><span class="en">Roadmap</span>日本語講師の30日ロードマップ</li>
+      <li><span class="en">Osaka</span>大阪・京都・オンライン</li>
+    </ul>
+  </div>
 </div>
 
-<section id="mission" class="alt">
+<!-- 理念 -->
+<section class="state" id="mission">
   <div class="wrap">
-    <div class="h3s"><h2>壁は一枚で、その両側に人が立っています。</h2><p>日本語講師として毎日聞いている声から、この仕事を始めました</p></div>
-    <div class="grid g2" style="align-items:start">
-      <div class="mission-story">
-        <p>英語圏の学習者に日本語を教えていると、「日本は好き。でも言葉が通じないのが不安で、旅行に踏み切れない」という声に何度も出会います。壁の反対側では、飲食店や宿、学校が「外国人に来てほしいけれど、言葉の壁で止まってしまう」と言っています。</p>
-        <p style="margin:0">壁は一枚で、両側に人が立っている。どちらか片方のためではなく、両側に立って壁を低くしていく。それが KOTOHA の仕事です。</p>
+    <div class="grid">
+      <div>
+        <div class="lbl rv">Philosophy</div>
+        <h2 class="big rv" style="--i:1;margin-top:22px">壁は一枚で、<br>その両側に<em>人</em>が<br>立っています。</h2>
       </div>
-      <div class="origin">
-        <img class="k" src="img/logo-wordmark.svg" alt="KOTOHA" width="320" height="49">
-        <span class="yomi">ことは。言の葉から。</span>
-        <p>大きな翻訳ではなく、一枚の葉のように小さな言葉を届けたい。「ありがとう」「これください」「おいしかった」。そんな一枚一枚が壁を越えるたびに、日本を「地元の人」のように楽しめる人が増えていく。その想いを、名前にしました。</p>
+      <div class="text">
+        <p class="rv" style="--i:2">英語圏の学習者に日本語を教えていると、「日本は好き。でも言葉が通じないのが不安で、旅行に踏み切れない」という声に何度も出会います。壁の反対側では、飲食店や宿、学校が「外国人に来てほしいけれど、言葉の壁で止まってしまう」と言っています。</p>
+        <p class="rv" style="--i:3">壁は一枚で、両側に人が立っている。どちらか片方のためではなく、両側に立って壁を低くしていく。それが KOTOHA の仕事です。</p>
+        <div class="three rv" style="--i:4">
+          <div><b>01</b>日本語学校には、英語圏の留学生を。</div>
+          <div><b>02</b>飲食店・宿には、外国人のお客さまを。</div>
+          <div><b>03</b>日本語を学ぶ人には、使える日本語を。</div>
+        </div>
       </div>
-    </div>
-    <div class="mission">
-      <b>言葉の壁をなくし、世界の人が日本を「地元の人」のように楽しめる世界へ。</b>
-      <ul>
-        <li>日本語学校には、英語圏の留学生を。</li>
-        <li>飲食店・宿には、外国人のお客さまを。</li>
-        <li>日本語を学ぶ人には、使える日本語を。</li>
-      </ul>
     </div>
   </div>
 </section>
 
-<section id="business">
+<!-- 数字 -->
+<section class="band" id="numbers">
   <div class="wrap">
-    <div class="h3s"><h2>あなたは、どちらですか</h2><p>相手ごとにページを分けています。当てはまるものからご覧ください</p></div>
-    <div class="grid g4 biz">
-      <a class="pcard" href="schools.html">
-        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&amp;fit=crop&amp;w=900&amp;q=70" alt="教室で学ぶ留学生たち" loading="lazy">
-        <div class="body">
-          <div class="num">01 ／ 学校の方へ</div>
+    <div class="head">
+      <div>
+        <div class="lbl light rv">By the numbers</div>
+        <h2 class="h2 light rv" style="--i:1">毎日、海外の学習者と<br>やり取りしている場所があります。</h2>
+      </div>
+      <p class="rv" style="--i:2">関西弁と標準語の違いを英語で解説する Instagram @helpmekansai と、オンラインの日本語レッスン。ここに届く質問が、留学のご相談・お店の発信・教材づくりの出発点です。</p>
+    </div>
+    <div class="nums">
+      <div class="rv" style="--i:0"><b><span data-count="86">0</span><small>%</small></b><span>@helpmekansai の<br>海外からの閲覧比率</span></div>
+      <div class="rv" style="--i:1"><b><span data-count="400">0</span></b><span>1投稿の<br>最高保存数</span></div>
+      <div class="rv" style="--i:2"><b><span data-count="213">0</span></b><span>1投稿で増えた<br>新規フォロワー</span></div>
+      <div class="rv" style="--i:3"><b><span data-count="20">0</span><small>+</small></b><span>日本語を教えてきた<br>学習者の出身国</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 事業 -->
+<section class="biz" id="business">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="lbl rv">What we do</div>
+        <h2 class="h2 rv" style="--i:1">あなたは、どちらですか。</h2>
+      </div>
+      <p class="sub rv" style="--i:2">相手ごとにページを分けています。当てはまるものからご覧ください。</p>
+    </div>
+    <div class="rows">
+      <a class="row rv" href="schools.html">
+        <div class="n">01</div>
+        <div class="pic"><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" alt="教室で学ぶ留学生たち" loading="lazy"><span class="tag">学校の方へ</span></div>
+        <div class="txt">
+          <div class="who">日本語学校の方へ</div>
           <h3>留学支援（日本語学校のご紹介）</h3>
-          <p>英語圏の日本語学習者に、レベルと目的を英語でうかがったうえで、日本語学校をご紹介します。短期（1〜3か月）と長期（1年程度）の両方に対応しています。</p>
-          <span class="to">学校向けの詳細を見る</span>
+          <p>英語圏の日本語学習者に、レベルと目的を英語でうかがったうえで、日本語学校をご紹介します。短期（1〜3か月）と長期（1年程度）の両方に対応。学生の手数料は0円、学校は入学確定後の成功報酬です。</p>
+          <div class="meta"><span>成功報酬</span><span>専属契約なし</span><span>英語対応はこちらで</span></div>
         </div>
+        <div class="go"></div>
       </a>
-      <a class="pcard" href="sns.html">
-        <img src="https://images.unsplash.com/photo-1533050487297-09b450131914?auto=format&amp;fit=crop&amp;w=900&amp;q=70" alt="提灯が並ぶ日本の飲み屋横丁" loading="lazy">
-        <div class="body">
-          <div class="num">02 ／ お店の方へ</div>
+      <a class="row rv" href="sns.html">
+        <div class="n">02</div>
+        <div class="pic"><img src="https://images.unsplash.com/photo-1533050487297-09b450131914?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" alt="提灯が並ぶ日本の飲み屋横丁" loading="lazy"><span class="tag">お店の方へ</span></div>
+        <div class="txt">
+          <div class="who">飲食店・宿・体験事業者の方へ</div>
           <h3>外国人向け Instagram 運用代行</h3>
           <p>翻訳ではなく、外国人が「来る前に知りたいこと」に答える投稿を、英語と日本語でつくります。まず1本、無料で。続ける場合は3〜5万円の単発制作から。</p>
-          <span class="to">店舗向けの詳細を見る</span>
+          <div class="meta"><span>初回1本 無料</span><span>英語＋日本語</span><span>海外閲覧86%の運用経験</span></div>
         </div>
+        <div class="go"></div>
       </a>
-      <a class="pcard" href="works.html#takotalk">
-        <img src="img/takotalk_card.jpg" alt="iOS アプリ Tako Talk の画面。たこ先生が「おかえり！また会えてうれしいな。」と話しかけている" loading="lazy">
-        <div class="body">
-          <div class="num">03 ／ 日本語を学ぶ人へ</div>
+      <a class="row rv" href="works.html#takotalk">
+        <div class="n">03</div>
+        <div class="pic"><img src="img/takotalk_card.jpg" alt="iOS アプリ Tako Talk の画面" loading="lazy"><span class="tag">日本語を学ぶ人へ</span></div>
+        <div class="txt">
+          <div class="who">日本語を学ぶ人へ</div>
           <h3>日本語学習教材・アプリ制作</h3>
-          <p>AI と日本語で話す練習ができる iOS アプリ <b>Tako Talk</b>、ひらがな・カタカナ演習アプリ、Kindle のフレーズ集。自分の声がお手本になる発音練習アプリ <b>Lanclo</b>（日本語を含む17言語対応）も公開しています。レッスンで出た質問から、学習者が本当に使う教材を作っています。</p>
-          <span class="to">教材・アプリの実績を見る</span>
+          <p>AI と日本語で話す練習ができる iOS アプリ Tako Talk、自分の声がお手本になる発音練習アプリ Lanclo（17言語対応）、ひらがな・カタカナ演習アプリ、Kindle のフレーズ集。レッスンで出た質問から作っています。</p>
+          <div class="meta"><span>Tako Talk</span><span>Lanclo</span><span>Kindle</span></div>
         </div>
+        <div class="go"></div>
       </a>
-      <a class="pcard" href="teaching.html">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=70" alt="ノートPCで学ぶ人たち" loading="lazy">
-        <div class="body">
-          <div class="num">04 ／ 講師になりたい方へ</div>
+      <a class="row rv" href="teaching.html">
+        <div class="n">04</div>
+        <div class="pic"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1200&amp;q=70" alt="ノートPCで学ぶ人たち" loading="lazy"><span class="tag">講師になりたい方へ</span></div>
+        <div class="txt">
+          <div class="who">日本語講師になりたい方へ</div>
           <h3>日本語講師の30日ロードマップ</h3>
           <p>資格なし・未経験から、副業4ヶ月目で月25万円に至った「やる順番」を30日の設計図に。レッスンで使える教材・アプリ4点つき。9,900円（税込）から。</p>
-          <span class="to">講師向けの詳細を見る</span>
+          <div class="meta"><span>PDF＋特典4点</span><span>面談・LINE サポート</span></div>
         </div>
+        <div class="go"></div>
       </a>
     </div>
+  </div>
+</section>
 
-    <div class="ig-intro" id="instagram">
-      <div class="ig-shots">
-        <img src="img/post_4280.jpg" alt="@helpmekansai の投稿。関西弁と標準語の言い方の違いを英語で解説" loading="lazy">
-        <img src="img/post_ojama.jpg" alt="@helpmekansai の投稿。「おじゃまします」の使い方" loading="lazy">
-        <img src="img/post_vo4.jpg" alt="@helpmekansai の投稿。東京と大阪で言い方がどう変わるか" loading="lazy">
+<!-- Instagram -->
+<section class="ig" id="instagram">
+  <div class="wrap">
+    <div class="grid">
+      <div class="shots" data-parallax>
+        <img class="rv" style="--i:0" src="img/post_4280.jpg" alt="@helpmekansai の投稿。関西弁と標準語の言い方の違いを英語で解説" loading="lazy">
+        <img class="rv" style="--i:1" src="img/post_ojama.jpg" alt="@helpmekansai の投稿。「おじゃまします」の使い方" loading="lazy">
+        <img class="rv" style="--i:2" src="img/post_vo4.jpg" alt="@helpmekansai の投稿。東京と大阪で言い方がどう変わるか" loading="lazy">
       </div>
-      <div class="ig-body">
-        <div class="ig-head">
-          <img src="img/tako/takosensei-512.png" alt="たこ先生" width="64" height="64">
-          <div><span class="ig-eyebrow">Instagram</span><b>@helpmekansai</b></div>
+      <div>
+        <div class="lbl rv">Instagram</div>
+        <h2 class="h2 rv" style="--i:1">関西弁と標準語の違いを、<br>英語で解説しています。</h2>
+        <div class="acct rv" style="--i:2">
+          <img src="img/tako/takosensei-512.png" alt="たこ先生" width="56" height="56">
+          <div><b>@helpmekansai</b><small>たこ先生と、関西のことば</small></div>
         </div>
-        <p>関西弁と標準語の違いを、英語で解説しているアカウントです。読んでいる人の <b>86%</b> が海外。ここに来るコメントや質問が、留学のご相談・お店の発信・教材づくり、すべての出発点になっています。</p>
-        <div class="ig-nums">
+        <p class="t rv" style="--i:3">読んでいる人の 86% が海外。ここに来るコメントや質問が、留学のご相談・お店の発信・教材づくり、すべての出発点になっています。</p>
+        <div class="mini rv" style="--i:4">
           <div><b>86%</b><span>海外からの閲覧</span></div>
-          <div><b>400</b><span>1投稿の最高保存数</span></div>
-          <div><b>213</b><span>1投稿の新規フォロワー</span></div>
+          <div><b>400</b><span>最高保存数</span></div>
+          <div><b>213</b><span>新規フォロワー／投稿</span></div>
         </div>
-        <div class="ig-cta">
-          <a class="btn sm" href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">Instagram で見る</a>
-          <a class="btn sm ghost dark" href="works.html">数字の詳細（実績）</a>
+        <div class="cta rv" style="--i:5">
+          <a class="btn" href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">Instagram で見る</a>
+          <a class="link" href="works.html">数字の詳細（実績）</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact-cta" class="alt">
+<!-- プロダクト -->
+<section class="prod" id="products">
   <div class="wrap">
-    <div class="cta-inline">
-      <div><h3>まずは、話を聞かせてください。</h3><p>日本語学校の方、飲食店・宿の方、日本語を学んでいる方。どなたでも、お問い合わせフォームから2分で送れます。</p></div>
-      <a class="btn" href="contact.html">お問い合わせへ</a>
+    <div class="head">
+      <div>
+        <div class="lbl rv">Products</div>
+        <h2 class="h2 rv" style="--i:1">すでに形にしたもの。</h2>
+      </div>
+      <a class="link rv" style="--i:2" href="works.html">実績をすべて見る</a>
+    </div>
+    <div class="cards">
+      <a class="card rv" style="--i:0" href="works.html#takotalk">
+        <div class="img"><img src="img/takotalk_card.jpg" alt="Tako Talk" loading="lazy"></div>
+        <div class="b"><div class="k">iOS App</div><h3>Tako Talk</h3><p>AI のたこ先生と、毎日5分、日本語で話す練習。会話のあとに直すところを1つだけ。</p></div>
+      </a>
+      <a class="card rv" style="--i:1" href="works.html#lanclo">
+        <div class="img"><img src="img/lanclo_card.jpg" alt="Lanclo" loading="lazy"></div>
+        <div class="b"><div class="k">Web App</div><h3>Lanclo</h3><p>自分の声が、ネイティブのお手本になる発音練習アプリ。日本語を含む17言語に対応。</p></div>
+      </a>
+      <a class="card rv" style="--i:2" href="works.html">
+        <div class="img pad"><img src="img/kindle_cover.jpg" alt="Real Japanese Travel Phrasebook" loading="lazy"></div>
+        <div class="b"><div class="k">Kindle</div><h3>Real Japanese Travel Phrasebook</h3><p>旅行前の学習者にそのまま渡せる、英語圏向けのフレーズ集。</p></div>
+      </a>
     </div>
   </div>
 </section>
 
-
-<footer>
+<!-- 名前の由来 -->
+<section class="origin" id="origin">
   <div class="wrap">
-    <div class="fnav">
-      <a href="index.html">ホーム</a>
-      <a href="index.html#mission">理念</a>
-      <a href="schools.html">学校の方へ</a>
-      <a href="sns.html">お店の方へ</a>
-      <a href="teaching.html">講師になりたい方へ</a>
-      <a href="works.html">実績</a>
-      <a href="about.html">代表</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="learners.html">Study in Japan (English)</a>
+    <div class="in">
+      <div class="rv">
+        <img class="mark" src="img/logo-wordmark.svg" alt="KOTOHA" width="360" height="55">
+        <div class="yomi">ことは。言の葉から。</div>
+      </div>
+      <p class="rv" style="--i:1">大きな翻訳ではなく、一枚の葉のように小さな言葉を届けたい。「ありがとう」「これください」「おいしかった」。そんな一枚一枚が壁を越えるたびに、日本を「地元の人」のように楽しめる人が増えていく。その想いを、名前にしました。</p>
     </div>
-    <div class="row">
-      <div><b style="font-family:Outfit,sans-serif;letter-spacing:.18em;color:var(--aka)">KOTOHA</b> ── ことは ／ 酒井 涼介（個人事業）／ 大阪 ／ © 2026</div>
-      <div><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener" style="color:var(--gray)">Instagram @helpmekansai</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact-cta">
+  <div class="wrap">
+    <div class="in">
+      <div>
+        <div class="lbl light rv" style="color:rgba(255,255,255,.8)">Contact</div>
+        <h2 class="rv" style="--i:1">まずは、話を聞かせてください。</h2>
+        <p class="rv" style="--i:2">日本語学校の方、飲食店・宿の方、日本語を学んでいる方。どなたでも、お問い合わせフォームから2分で送れます。</p>
+      </div>
+      <a class="btn rv" style="--i:3" href="contact.html">お問い合わせへ</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <img src="img/logo-wordmark.svg" alt="KOTOHA" width="182" height="28">
+        <p>言葉の壁をなくし、世界の人が日本を「地元の人」のように楽しめる世界へ。日本語講師 × SNS運用 × 海外営業。大阪の個人事業です。</p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="schools.html">学校の方へ</a></li>
+          <li><a href="sns.html">お店の方へ</a></li>
+          <li><a href="teaching.html">講師になりたい方へ</a></li>
+          <li><a href="learners.html">Study in Japan（English）</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>About</h2>
+        <ul>
+          <li><a href="index.html#mission">理念</a></li>
+          <li><a href="works.html">実績</a></li>
+          <li><a href="about.html">代表</a></li>
+          <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="https://www.instagram.com/helpmekansai/" target="_blank" rel="noopener">Instagram @helpmekansai</a></li>
+          <li><a href="mailto:kotohajapan.info@gmail.com">kotohajapan.info@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bot">
+      <div>© 2026 KOTOHA ── ことは ／ 酒井 涼介（個人事業）／ 大阪</div>
+      <div>Osaka ・ Kyoto ・ Online</div>
     </div>
     <div class="src">「ことは」＝「言の葉」から。言葉を意味する古い言い方です。／ 出典：国際交流基金 2024年度 海外日本語教育機関調査（2025年9月公表）、Duolingo Language Report 2025、JNTO 訪日外客数 2025年12月推計値（2026年1月公表）、@helpmekansai インサイト（本人提供・各指標は集計時点の値）。料金・工数・社数は計画値です。風景・教室の写真は Unsplash（Unsplash License）。</div>
   </div>
 </footer>
 
+<script src="assets/site.js?v=20261028b"></script>
 <script>
-  function toggleNav(btn){
-    var n = document.getElementById('nav');
-    btn.setAttribute('aria-expanded', n.classList.toggle('open'));
+(function(){
+  var hero=document.querySelector('.hero');
+  if(hero) requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('on'); }); });
+  /* 数字のカウントアップ */
+  var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; var el=e.target,to=+el.dataset.count,t0=null; cio.unobserve(el);
+    function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/1400); p=1-Math.pow(1-p,3); el.textContent=Math.round(to*p); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step); }); },{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){ if(document.documentElement.classList.contains('shot')){ el.textContent=el.dataset.count; } else { cio.observe(el); } });
+  /* Instagram 画像のゆるいパララックス */
+  var par=document.querySelector('[data-parallax]');
+  if(par && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var imgs=par.querySelectorAll('img');
+    function tick(){ var r=par.getBoundingClientRect(), c=(r.top+r.height/2-innerHeight/2)/innerHeight; imgs.forEach(function(im,i){ im.style.transform='translateY('+(c*(i-1)*-28)+'px)'; }); }
+    addEventListener('scroll',tick,{passive:true}); tick();
   }
-  document.querySelectorAll('#nav a').forEach(function(a){
-    a.addEventListener('click', function(){
-      document.getElementById('nav').classList.remove('open');
-      var b = document.querySelector('.burger');
-      if (b) b.setAttribute('aria-expanded','false');
-    });
-  });
+})();
 </script>
 </body>
 </html>
