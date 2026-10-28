@@ -315,7 +315,7 @@ section.tint .step{background:transparent!important}
 .plan,.price,.box,.band,.faq,.cform,.sch,.pcard,.rp-plans .price{border-radius:6px}
 
 /* ---------- 注記（.band）：塗りをやめ、左の罫線だけで示す ---------- */
-div.band:not(.ln-notice){background:transparent;border:0;border-left:2px solid var(--line);
+div.band:not(.ln-notice){background:transparent;border:0;border-left:1px solid var(--line);
   border-radius:0;padding:2px 0 2px 20px;margin-top:28px;
   font-size:14px;font-weight:400;line-height:1.95;color:var(--body)}
 div.band.indigo:not(.ln-notice){border-left-color:var(--indigo)}
