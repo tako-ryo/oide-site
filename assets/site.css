@@ -228,3 +228,118 @@ section.tint .band.indigo{background:var(--indigo-l);border-color:rgba(43,74,107
 
 /* 撮影モード（?shot）では、ページ独自の .reveal も含めてすべて表示する */
 .shot .rv,.shot .reveal,.shot .rv-clip{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+
+/* ============================================================
+   質感の調整（2026-10-28）
+   角丸を浅く、表は罫線だけ、工程は箱をやめて罫線で区切る。
+   参考：TOYOTA / 三菱電機 / モンスターラボ / ラシン
+   ============================================================ */
+:root{ --r:6px; --r-sm:4px; --r-lg:10px; }
+.card,.box,.pcard,.step,.merit,.faq,.cform,.sch,.ln-reasons article{border-radius:6px}
+.cta-inline,.ln-book,.rp-cta{border-radius:8px}
+.card .thumb,.collage img,.pic,.lp-shot,.after figure,.ig .shots img{border-radius:6px}
+
+/* ---------- 表：塗りをやめ、罫線と太字で組む ---------- */
+.tblwrap{border:0;border-radius:0;overflow-x:auto}
+table{background:transparent}
+th,td{padding:16px 18px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:transparent;color:var(--ink);font-size:13px;font-weight:700;letter-spacing:.02em;
+  border-bottom:2px solid var(--ink);padding-bottom:12px}
+thead th.hi{background:transparent;color:var(--aka);border-bottom-color:var(--aka)}
+tbody th{background:transparent;color:var(--gray);font-size:13px;font-weight:700;width:18%}
+td.hi{background:transparent;color:var(--ink);font-weight:700}
+/* 自社の列だけ、ごく薄い地で示す */
+.tblwrap table tr > *:last-child{padding-left:18px}
+.cmp td.hi,.cmp thead th.hi{background:rgba(198,63,36,.04)}
+.cmp thead th,.cmp tbody th{font-size:13px}
+.cmp tbody th{width:20%}
+@media(max-width:560px){
+  .cmp tbody th{background:var(--sand);padding:12px 14px 4px}
+  .cmp td{padding:8px 14px 12px}
+  .cmp td.hi{background:rgba(198,63,36,.04)}
+}
+.tblwrap.legal{border:0}
+.tblwrap.legal tbody th{width:26%;color:var(--gray)}
+
+/* ---------- 工程（steps）：箱をやめ、上の罫線で区切る ---------- */
+.steps{gap:clamp(20px,2.4vw,34px)}
+.step{background:transparent!important;border:0;border-top:1px solid var(--line);border-radius:0;
+  padding:22px 0 0;box-shadow:none}
+.step:hover{transform:none;border-color:var(--line)}
+.step::before{color:var(--aka);font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.14em}
+.step b{font-size:17px;margin:10px 0 8px;letter-spacing:-.003em}
+.step p{font-size:14px;line-height:1.95;color:var(--body)}
+.step small{margin-top:10px}
+.step .bookbtn{margin-top:14px}
+section.tint .step{background:transparent!important}
+
+/* ---------- 写真の組み：ずらしをやめて揃える ---------- */
+.collage{grid-template-columns:1fr 1fr;gap:10px}
+.collage img{aspect-ratio:4/5;margin-top:0!important}
+@media(max-width:560px){.collage img{aspect-ratio:1}}
+
+/* ---------- 写真のないカードは、箱をやめて罫線で区切る ---------- */
+.grid > .card:not(:has(img)),
+.after-cards > .card:not(:has(img)){
+  background:transparent!important;border:0;border-top:1px solid var(--line);
+  border-radius:0;padding:22px 0 0;box-shadow:none}
+.grid > .card:not(:has(img)):hover{transform:none;box-shadow:none}
+.grid > .card:not(:has(img)) h3{font-size:17px;letter-spacing:-.003em;margin-bottom:10px}
+.grid > .card:not(:has(img)) .tag{font-family:var(--en);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--aka);font-weight:600;margin-bottom:8px}
+.grid > .card:not(:has(img)) p{font-size:14px;line-height:1.95}
+.grid > .card:not(:has(img)) ul{font-size:14px}
+/* 強調したい箱（.box）は枠のまま残す */
+
+/* ---------- 文字だけの並びは、すべて罫線区切りに統一 ---------- */
+.persona > div,.merit,.floor,.strengths > div,.team > div,.worry > div{
+  background:transparent!important;border:0;border-top:1px solid var(--line);border-radius:0;
+  padding:22px 0 0;box-shadow:none}
+.persona > div:hover,.merit:hover,.floor:hover{transform:none}
+.persona small,.floor .lvl,.strengths small,.team small,.worry i{
+  display:block;font-family:var(--en);font-size:11px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--aka);margin-bottom:8px}
+.team small{color:var(--aka)}
+.strengths small,.persona small{color:var(--gray);font-family:inherit;letter-spacing:.04em;text-transform:none;font-size:12px}
+.persona b,.team b{font-size:17px;margin-bottom:8px;letter-spacing:-.003em}
+.floor h3,.strengths b{font-size:19px;margin-bottom:8px;letter-spacing:-.003em}
+.merit b{font-size:17px;margin:10px 0 8px;letter-spacing:-.003em}
+/* 番号は四角い札をやめ、小さな英数字に */
+.merit i{display:block;width:auto;height:auto;background:transparent;color:var(--aka);
+  font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.14em;margin:0}
+.persona p,.merit p,.floor p,.team div,.strengths ul{font-size:14px;line-height:1.95}
+.worry{gap:clamp(16px,2vw,28px)}
+.worry b{display:block;font-size:16px;margin:10px 0 6px}
+.worry small{font-size:13px;line-height:1.8;color:var(--body)}
+/* 料金表の「おすすめ」など、意味のある箱は枠のまま残す */
+.plan,.price,.box,.band,.faq,.cform,.sch,.pcard,.rp-plans .price{border-radius:6px}
+
+/* ---------- 注記（.band）：塗りをやめ、左の罫線だけで示す ---------- */
+div.band:not(.ln-notice){background:transparent;border:0;border-left:2px solid var(--line);
+  border-radius:0;padding:2px 0 2px 20px;margin-top:28px;
+  font-size:14px;font-weight:400;line-height:1.95;color:var(--body)}
+div.band.indigo:not(.ln-notice){border-left-color:var(--indigo)}
+div.band b,div.band strong{color:var(--ink);font-weight:700}
+section.tint div.band:not(.ln-notice){background:transparent}
+
+/* ---------- 小さな札：淡い塗りをやめ、細い枠の小見出しに ---------- */
+.floor .pay,.merit .opt{background:transparent;border:1px solid currentColor;border-radius:2px;
+  font-size:11px;font-weight:600;letter-spacing:.06em;padding:2px 7px;vertical-align:1px}
+.floor .pay{color:var(--gray)}
+.floor.two .pay{color:var(--aka)}
+.merit .opt{color:var(--gray)}
+
+/* ---------- 数字の並び：箱をやめ、上の罫線で示す ---------- */
+.showcase,.ig-intro{box-shadow:none}
+.showcase .mini{grid-template-columns:repeat(4,1fr);gap:0 28px;margin:22px 0}
+.showcase .mini div,.ig-nums div{background:transparent!important;border:0;
+  border-top:1px solid var(--line);border-radius:0;padding:14px 0 0}
+.showcase .mini b,.ig-nums b{font-family:var(--en);font-weight:600;font-size:30px;
+  letter-spacing:-.02em;line-height:1.1}
+.showcase .mini span,.ig-nums span{display:block;font-size:12px;font-weight:400;color:var(--gray);
+  margin-top:4px;line-height:1.6}
+.ig-nums{gap:0 24px}
+@media(max-width:560px){.showcase .mini{grid-template-columns:1fr 1fr;gap:0 20px}}
+/* アカウント名は札をやめ、赤い小見出しに */
+.showcase .acct{background:transparent;border-radius:0;padding:0;margin-bottom:10px;
+  font-family:var(--en);font-size:12px;font-weight:600;letter-spacing:.08em}
