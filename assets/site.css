@@ -367,3 +367,10 @@ section.tint div.band:not(.ln-notice){background:transparent}
 .made-grid b{display:block;font-size:17px;letter-spacing:-.003em;margin-bottom:8px}
 .made-grid span{display:block;font-size:14px;line-height:1.95;color:var(--body)}
 @media(max-width:720px){.made-grid{grid-template-columns:1fr}}
+
+/* ---------- 実績ページの数字（.kpi）：箱をやめ、ほかの数字の並びと同じ罫線組みに ---------- */
+.kpis{gap:22px 24px;margin-bottom:28px}
+.kpi{background:transparent!important;border:0;border-top:1px solid var(--line);border-radius:0;padding:14px 0 0!important}
+.kpi b{font-family:var(--en);font-weight:600;font-size:30px;letter-spacing:-.02em;color:var(--ink)}
+.kpi span{font-size:12px;color:var(--gray);line-height:1.6}
+@media(max-width:560px){.kpis{gap:20px 20px}.kpi:nth-child(5):last-child{grid-column:auto}}
